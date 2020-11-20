@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Stairs_Railing_Rising_Curved_Inner.obj-b9eec330d466e92b9ddcbc96a4370292.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Stairs_Railing_Rising_Curved_Inner.obj-b9eec330d466e92b9ddcbc96a4370292.mesh" ]
+
+source_file="res://House Models/Structure_Stairs_Railing_Rising_Curved_Inner.obj"
+dest_files=[ "res://.import/Structure_Stairs_Railing_Rising_Curved_Inner.obj-b9eec330d466e92b9ddcbc96a4370292.mesh", "res://.import/Structure_Stairs_Railing_Rising_Curved_Inner.obj-b9eec330d466e92b9ddcbc96a4370292.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

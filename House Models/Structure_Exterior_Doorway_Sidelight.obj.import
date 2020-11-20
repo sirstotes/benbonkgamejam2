@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Exterior_Doorway_Sidelight.obj-47d8a24edf1ab17c9dbddf8a883f7ca1.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Exterior_Doorway_Sidelight.obj-47d8a24edf1ab17c9dbddf8a883f7ca1.mesh" ]
+
+source_file="res://House Models/Structure_Exterior_Doorway_Sidelight.obj"
+dest_files=[ "res://.import/Structure_Exterior_Doorway_Sidelight.obj-47d8a24edf1ab17c9dbddf8a883f7ca1.mesh", "res://.import/Structure_Exterior_Doorway_Sidelight.obj-47d8a24edf1ab17c9dbddf8a883f7ca1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

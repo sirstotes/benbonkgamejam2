@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Bedroom_Dresser_Single.obj-c181367629cb3e78c07a438dc3124883.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Bedroom_Dresser_Single.obj-c181367629cb3e78c07a438dc3124883.mesh" ]
+
+source_file="res://House Models/Prop_Bedroom_Dresser_Single.obj"
+dest_files=[ "res://.import/Prop_Bedroom_Dresser_Single.obj-c181367629cb3e78c07a438dc3124883.mesh", "res://.import/Prop_Bedroom_Dresser_Single.obj-c181367629cb3e78c07a438dc3124883.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

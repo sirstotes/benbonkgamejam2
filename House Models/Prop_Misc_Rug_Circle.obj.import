@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Misc_Rug_Circle.obj-37db7cfbd8974b5c801ea8126eed74bc.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Misc_Rug_Circle.obj-37db7cfbd8974b5c801ea8126eed74bc.mesh" ]
+
+source_file="res://House Models/Prop_Misc_Rug_Circle.obj"
+dest_files=[ "res://.import/Prop_Misc_Rug_Circle.obj-37db7cfbd8974b5c801ea8126eed74bc.mesh", "res://.import/Prop_Misc_Rug_Circle.obj-37db7cfbd8974b5c801ea8126eed74bc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

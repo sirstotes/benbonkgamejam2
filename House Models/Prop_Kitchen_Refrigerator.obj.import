@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Kitchen_Refrigerator.obj-4aa4f06cabc33988784df28cf8746c54.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Kitchen_Refrigerator.obj-4aa4f06cabc33988784df28cf8746c54.mesh" ]
+
+source_file="res://House Models/Prop_Kitchen_Refrigerator.obj"
+dest_files=[ "res://.import/Prop_Kitchen_Refrigerator.obj-4aa4f06cabc33988784df28cf8746c54.mesh", "res://.import/Prop_Kitchen_Refrigerator.obj-4aa4f06cabc33988784df28cf8746c54.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

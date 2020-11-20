@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Kitchen_Cabinet_Wall_Open.obj-baf3ef1e447b3989d8228092c0553500.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Kitchen_Cabinet_Wall_Open.obj-baf3ef1e447b3989d8228092c0553500.mesh" ]
+
+source_file="res://House Models/Structure_Kitchen_Cabinet_Wall_Open.obj"
+dest_files=[ "res://.import/Structure_Kitchen_Cabinet_Wall_Open.obj-baf3ef1e447b3989d8228092c0553500.mesh", "res://.import/Structure_Kitchen_Cabinet_Wall_Open.obj-baf3ef1e447b3989d8228092c0553500.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

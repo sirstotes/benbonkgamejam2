@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Bathroom_Tile_Wall_Corner.obj-49beb4404fb3b3a03a473dcf55d42a51.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Bathroom_Tile_Wall_Corner.obj-49beb4404fb3b3a03a473dcf55d42a51.mesh" ]
+
+source_file="res://House Models/Structure_Bathroom_Tile_Wall_Corner.obj"
+dest_files=[ "res://.import/Structure_Bathroom_Tile_Wall_Corner.obj-49beb4404fb3b3a03a473dcf55d42a51.mesh", "res://.import/Structure_Bathroom_Tile_Wall_Corner.obj-49beb4404fb3b3a03a473dcf55d42a51.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

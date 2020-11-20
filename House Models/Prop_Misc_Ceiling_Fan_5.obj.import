@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Misc_Ceiling_Fan_5.obj-a0a3eed98c44a121447450d53eee7dd9.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Misc_Ceiling_Fan_5.obj-a0a3eed98c44a121447450d53eee7dd9.mesh" ]
+
+source_file="res://House Models/Prop_Misc_Ceiling_Fan_5.obj"
+dest_files=[ "res://.import/Prop_Misc_Ceiling_Fan_5.obj-a0a3eed98c44a121447450d53eee7dd9.mesh", "res://.import/Prop_Misc_Ceiling_Fan_5.obj-a0a3eed98c44a121447450d53eee7dd9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
