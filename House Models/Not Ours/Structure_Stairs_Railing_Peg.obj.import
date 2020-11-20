@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Stairs_Railing_Peg.obj-4ce0ac77c4a6937eaf8e0ea1ea171b45.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Stairs_Railing_Peg.obj-4ce0ac77c4a6937eaf8e0ea1ea171b45.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Stairs_Railing_Peg.obj"
+dest_files=[ "res://.import/Structure_Stairs_Railing_Peg.obj-4ce0ac77c4a6937eaf8e0ea1ea171b45.mesh", "res://.import/Structure_Stairs_Railing_Peg.obj-4ce0ac77c4a6937eaf8e0ea1ea171b45.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

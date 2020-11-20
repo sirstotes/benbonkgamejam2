@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Ceiling_Beam_Angled_Offset.obj-e44fd77bd2f1732edfab81f2b36e9aca.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Ceiling_Beam_Angled_Offset.obj-e44fd77bd2f1732edfab81f2b36e9aca.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Ceiling_Beam_Angled_Offset.obj"
+dest_files=[ "res://.import/Structure_Ceiling_Beam_Angled_Offset.obj-e44fd77bd2f1732edfab81f2b36e9aca.mesh", "res://.import/Structure_Ceiling_Beam_Angled_Offset.obj-e44fd77bd2f1732edfab81f2b36e9aca.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

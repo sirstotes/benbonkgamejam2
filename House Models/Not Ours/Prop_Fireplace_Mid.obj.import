@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Fireplace_Mid.obj-ccd7194f559e2fe4164026758b8696ee.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Fireplace_Mid.obj-ccd7194f559e2fe4164026758b8696ee.mesh" ]
+
+source_file="res://House Models/Not Ours/Prop_Fireplace_Mid.obj"
+dest_files=[ "res://.import/Prop_Fireplace_Mid.obj-ccd7194f559e2fe4164026758b8696ee.mesh", "res://.import/Prop_Fireplace_Mid.obj-ccd7194f559e2fe4164026758b8696ee.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

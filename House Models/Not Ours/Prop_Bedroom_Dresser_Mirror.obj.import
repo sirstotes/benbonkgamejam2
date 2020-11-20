@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Bedroom_Dresser_Mirror.obj-33a61bf931fdbb01efb5c64a1bcc12fe.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Bedroom_Dresser_Mirror.obj-33a61bf931fdbb01efb5c64a1bcc12fe.mesh" ]
+
+source_file="res://House Models/Not Ours/Prop_Bedroom_Dresser_Mirror.obj"
+dest_files=[ "res://.import/Prop_Bedroom_Dresser_Mirror.obj-33a61bf931fdbb01efb5c64a1bcc12fe.mesh", "res://.import/Prop_Bedroom_Dresser_Mirror.obj-33a61bf931fdbb01efb5c64a1bcc12fe.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

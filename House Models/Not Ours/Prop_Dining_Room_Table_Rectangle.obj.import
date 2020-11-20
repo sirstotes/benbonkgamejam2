@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Dining_Room_Table_Rectangle.obj-6984b2c509dbf3cbed1bec894771186e.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Dining_Room_Table_Rectangle.obj-6984b2c509dbf3cbed1bec894771186e.mesh" ]
+
+source_file="res://House Models/Not Ours/Prop_Dining_Room_Table_Rectangle.obj"
+dest_files=[ "res://.import/Prop_Dining_Room_Table_Rectangle.obj-6984b2c509dbf3cbed1bec894771186e.mesh", "res://.import/Prop_Dining_Room_Table_Rectangle.obj-6984b2c509dbf3cbed1bec894771186e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
