@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/EverythingLibrary_Furnishings_001.fbx-c671875f4c034d3068d74a9eff70fc6e.scn"
+path="res://.import/EverythingLibrary_Furnishings_001.fbx-4b4f3eaefb3282ac2c1db5b548d6a9ed.scn"
 
 [deps]
 
-source_file="res://EverythingLibrary_Furnishings_001.fbx"
-dest_files=[ "res://.import/EverythingLibrary_Furnishings_001.fbx-c671875f4c034d3068d74a9eff70fc6e.scn" ]
+source_file="res://Furniture Models/EverythingLibrary_Furnishings_001.fbx"
+dest_files=[ "res://.import/EverythingLibrary_Furnishings_001.fbx-4b4f3eaefb3282ac2c1db5b548d6a9ed.scn" ]
 
 [params]
 
