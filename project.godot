@@ -19,6 +19,10 @@ config/name="BenBonkGameJam2"
 run/main_scene="res://Test Stuff/Test Pickup Items.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "MagicaVoxelImporter" )
+
 [input]
 
 player_forward={
