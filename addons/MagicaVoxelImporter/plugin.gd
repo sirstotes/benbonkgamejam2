@@ -68,11 +68,11 @@ class ImportPlugin extends EditorImportPlugin:
 	func import( source_path, save_path, options, platforms, gen_files ):
 		#Initialize and populate voxel array
 		var voxelArray = []
-		for x in range(0,128):
+		for x in range(0,256):
 			voxelArray.append([])
-			for y in range(0,128):
+			for y in range(0,256):
 				voxelArray[x].append([])
-				voxelArray[x][y].resize(128)
+				voxelArray[x][y].resize(256)
 		
 		var file = File.new()
 		var error = file.open( source_path, File.READ )
