@@ -10,7 +10,7 @@ export(float) var friction = 100
 
 var velocity = Vector3()
 var looking = Vector3()
-var holding = true
+var holding = false
 onready var viewport = $"Viewport"
 onready var pickup_node = $"Viewport/Pickup"
 
@@ -33,8 +33,6 @@ func _physics_process(delta):
 			if len(result) > 0:
 				if result['collider'].is_in_group("Moving"):
 					result['collider'].ready_to_pick_up = true
-		else:
-			holding = false
 	if velocity.x > friction:
 		velocity.x -= friction
 	elif velocity.x < -friction:
@@ -48,7 +46,6 @@ func _physics_process(delta):
 		velocity.z += friction
 	else:
 		velocity.z = 0
-	velocity.y += gravity * delta
 	var forward = Input.is_action_pressed("player_forward")
 	var backward = Input.is_action_pressed("player_backward")
 	var left = Input.is_action_pressed("player_left")
@@ -58,7 +55,6 @@ func _physics_process(delta):
 	
 	if is_on_floor() and jump:
 		velocity.y = jump_speed
-		
 	var walkvector = Vector2()
 	walkvector.x += velocity.x
 	walkvector.y -= velocity.z
@@ -76,3 +72,6 @@ func _physics_process(delta):
 		walkvector = walkvector.clamped(max_walk_speed)
 	velocity = Vector3(walkvector.x, velocity.y, -walkvector.y)
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
+	velocity.y += gravity * delta
+
+
