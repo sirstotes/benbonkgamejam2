@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Misc_Trashcan.obj-50116d73b1548a766d0e23e2b7e41184.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Misc_Trashcan.obj-50116d73b1548a766d0e23e2b7e41184.mesh" ]
+
+source_file="res://House Models/Not Ours/Prop_Misc_Trashcan.obj"
+dest_files=[ "res://.import/Prop_Misc_Trashcan.obj-50116d73b1548a766d0e23e2b7e41184.mesh", "res://.import/Prop_Misc_Trashcan.obj-50116d73b1548a766d0e23e2b7e41184.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

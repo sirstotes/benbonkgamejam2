@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Kitchen_Bar_Corner_Outer.obj-93bede5075238b7c298c287df47a43cd.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Kitchen_Bar_Corner_Outer.obj-93bede5075238b7c298c287df47a43cd.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Kitchen_Bar_Corner_Outer.obj"
+dest_files=[ "res://.import/Structure_Kitchen_Bar_Corner_Outer.obj-93bede5075238b7c298c287df47a43cd.mesh", "res://.import/Structure_Kitchen_Bar_Corner_Outer.obj-93bede5075238b7c298c287df47a43cd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

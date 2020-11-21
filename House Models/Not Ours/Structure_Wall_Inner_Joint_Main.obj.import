@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Wall_Inner_Joint_Main.obj-1b199c4ca220b02c64059f31fa4cf476.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Wall_Inner_Joint_Main.obj-1b199c4ca220b02c64059f31fa4cf476.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Wall_Inner_Joint_Main.obj"
+dest_files=[ "res://.import/Structure_Wall_Inner_Joint_Main.obj-1b199c4ca220b02c64059f31fa4cf476.mesh", "res://.import/Structure_Wall_Inner_Joint_Main.obj-1b199c4ca220b02c64059f31fa4cf476.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

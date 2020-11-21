@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Kitchen_Cabinet_Side_Shelves.obj-1ce798088dd85e782ed3dd7dbd43c576.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Kitchen_Cabinet_Side_Shelves.obj-1ce798088dd85e782ed3dd7dbd43c576.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Kitchen_Cabinet_Side_Shelves.obj"
+dest_files=[ "res://.import/Structure_Kitchen_Cabinet_Side_Shelves.obj-1ce798088dd85e782ed3dd7dbd43c576.mesh", "res://.import/Structure_Kitchen_Cabinet_Side_Shelves.obj-1ce798088dd85e782ed3dd7dbd43c576.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Structure_Kitchen_Cabinet_Wall_Half.obj-7d6b465140be85bc093399474fc86233.mesh"
+
+[deps]
+
+files=[ "res://.import/Structure_Kitchen_Cabinet_Wall_Half.obj-7d6b465140be85bc093399474fc86233.mesh" ]
+
+source_file="res://House Models/Not Ours/Structure_Kitchen_Cabinet_Wall_Half.obj"
+dest_files=[ "res://.import/Structure_Kitchen_Cabinet_Wall_Half.obj-7d6b465140be85bc093399474fc86233.mesh", "res://.import/Structure_Kitchen_Cabinet_Wall_Half.obj-7d6b465140be85bc093399474fc86233.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
