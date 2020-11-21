@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Vox/models.vox" type="ArrayMesh" id=1]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 10, 10 )
@@ -11,3 +13,7 @@ albedo_color = Color( 0.254902, 0.305882, 0.254902, 1 )
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
+
+[node name="models2" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
