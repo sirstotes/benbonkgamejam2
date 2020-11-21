@@ -2,8 +2,8 @@ extends RigidBody
 
 var velocity
 
-onready var pickup = $"../Player/Viewport/Pickup"
-onready var player = $"../Player"
+onready var pickup = $"../../Player/Viewport/Pickup"
+onready var player = $"../../Player"
 onready var my_mesh = $"mesh"
 
 var picked = false

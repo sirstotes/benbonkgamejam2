@@ -25,7 +25,7 @@ func _input(event):
 		viewport.rotation.y = looking.y
 		viewport.rotation.x = looking.x
 func _physics_process(delta):
-	
+	velocity.y += gravity * delta
 	if Input.is_action_just_pressed("player_pickup"):
 		if !holding:
 			var space_state = get_world().direct_space_state
@@ -52,7 +52,6 @@ func _physics_process(delta):
 	var right = Input.is_action_pressed("player_right")
 	var jump = Input.is_action_just_pressed("player_jump")
 	var run = Input.is_action_pressed("player_run")
-	
 	if is_on_floor() and jump:
 		velocity.y = jump_speed
 	var walkvector = Vector2()
@@ -71,7 +70,7 @@ func _physics_process(delta):
 	else:
 		walkvector = walkvector.clamped(max_walk_speed)
 	velocity = Vector3(walkvector.x, velocity.y, -walkvector.y)
-	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
-	velocity.y += gravity * delta
+	velocity = move_and_slide(velocity, Vector3(0, 1, 0), false, 4, 0.785398, false)
+	
 
 
