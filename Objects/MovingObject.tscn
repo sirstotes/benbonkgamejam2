@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://House Models/Not Ours/Structure_Kitchen_Cabinet_Base_Full.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Vox/bed-blue.vox" type="ArrayMesh" id=1]
 [ext_resource path="res://Scripts/Pickable Object.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.5, 0.5, 0.4 )
+extents = Vector3( 0.575, 0.3, 1.25 )
 
 [node name="RigidBody" type="RigidBody"]
 continuous_cd = true
@@ -14,18 +14,10 @@ axis_lock_angular_z = true
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.173358, 0 )
 shape = SubResource( 1 )
 
-[node name="Structure_Kitchen_Cabinet_Base_Full" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0.1 )
+[node name="mesh" type="MeshInstance" parent="."]
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.116486, -0.553922, 0.18545 )
 mesh = ExtResource( 1 )
 material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
-material/6 = null
-material/7 = null
-material/8 = null
-material/9 = null

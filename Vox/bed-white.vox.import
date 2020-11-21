@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/bed-white.vox-b24e0f31b9df269b8a1ccded657b6bb3.mesh"
+
+[deps]
+
+source_file="res://Vox/bed-white.vox"
+dest_files=[ "res://.import/bed-white.vox-b24e0f31b9df269b8a1ccded657b6bb3.mesh" ]
+
+[params]
+

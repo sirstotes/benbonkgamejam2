@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/lamp-blue.vox-c47164df2b918cd52eca9c2ebf7d7d63.mesh"
+
+[deps]
+
+source_file="res://Vox/lamp-blue.vox"
+dest_files=[ "res://.import/lamp-blue.vox-c47164df2b918cd52eca9c2ebf7d7d63.mesh" ]
+
+[params]
+

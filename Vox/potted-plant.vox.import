@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/potted-plant.vox-8f5314846c1e7c4e17a1696172256353.mesh"
+
+[deps]
+
+source_file="res://Vox/potted-plant.vox"
+dest_files=[ "res://.import/potted-plant.vox-8f5314846c1e7c4e17a1696172256353.mesh" ]
+
+[params]
+

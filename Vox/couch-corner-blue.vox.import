@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/couch-corner-blue.vox-b1c4adbd6924b8dad5cdaca21744617b.mesh"
+
+[deps]
+
+source_file="res://Vox/couch-corner-blue.vox"
+dest_files=[ "res://.import/couch-corner-blue.vox-b1c4adbd6924b8dad5cdaca21744617b.mesh" ]
+
+[params]
+

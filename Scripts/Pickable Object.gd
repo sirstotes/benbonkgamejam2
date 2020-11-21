@@ -1,15 +1,17 @@
 extends RigidBody
 
-
-var velocity;
+var velocity
 
 onready var pickup = $"../Player/Viewport/Pickup"
+onready var player = $"../Player"
+onready var my_mesh = $"mesh"
 
 var picked = false
 var ready_to_pick_up = false
 var distance = Vector3()
 var speed = 20
 var sensitivity = 0.2
+var looked_at = 0
 
 func _ready():
 	add_to_group("Moving")
@@ -23,10 +25,18 @@ func _input(event):
 		rotate_y(looking.y)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	looked_at = looked_at - 1
+	#if looked_at > 0:
+		#my_mesh.get_material_override().get_next_pass()
 	if(picked):
 		axis_lock_angular_x = true
 		axis_lock_angular_y = true
 		axis_lock_angular_z = true
+		distance = player.global_transform.origin - self.global_transform.origin
+		if distance.length() > 4:
+			picked = false
+			ready_to_pick_up = false
+			player.holding = false
 		distance = pickup.global_transform.origin - self.global_transform.origin
 		linear_velocity = distance * 10
 		if Input.is_action_just_pressed("player_pickup"):
