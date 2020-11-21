@@ -1,0 +1,16 @@
+[remap]
+
+importer="mtl.loader"
+type="SpatialMaterial"
+path="res://.import/house1.mtl-00f9a6d970f9dfedb07e73fa37183272.material"
+
+[deps]
+
+files=[ "res://Vox/palette.material" ]
+
+source_file="res://Vox/house1.mtl"
+dest_files=[ "res://.import/house1.mtl-00f9a6d970f9dfedb07e73fa37183272.material", "res://Vox/palette.material" ]
+
+[params]
+
+generate_multiple_files=true
