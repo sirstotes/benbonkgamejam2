@@ -21,7 +21,8 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "MagicaVoxel_Importer_with_Extensions" )
+enabled=PoolStringArray( "MagicaVoxelImporter" )
+
 [input]
 
 player_forward={
