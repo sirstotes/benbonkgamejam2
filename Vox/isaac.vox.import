@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/isaac.vox-36bf274c8e3c8740bee09f39eae1d397.mesh"
+
+[deps]
+
+source_file="res://Vox/isaac.vox"
+dest_files=[ "res://.import/isaac.vox-36bf274c8e3c8740bee09f39eae1d397.mesh" ]
+
+[params]
+

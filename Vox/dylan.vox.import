@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/dylan.vox-bc0a6f6b38a9bcfa7f64cb0ab4f01eba.mesh"
+
+[deps]
+
+source_file="res://Vox/dylan.vox"
+dest_files=[ "res://.import/dylan.vox-bc0a6f6b38a9bcfa7f64cb0ab4f01eba.mesh" ]
+
+[params]
+
