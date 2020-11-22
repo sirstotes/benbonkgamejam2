@@ -1,7 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/MovingObject.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Furniture/Beds/Red Bed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Vox/player.vox" type="ArrayMesh" id=3]
+[ext_resource path="res://Objects/Furniture/Boxes/Box1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Furniture/Beds/Green Bed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Furniture/Boxes/Box3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Furniture/Beds/Blue Bed.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Furniture/Beds/White Bed.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Furniture/Boxes/Box4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Furniture/Chairs/Chair1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue Corner.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue Middle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Objects/Furniture/Lamp.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/Furniture/Rug.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/Furniture/Plant.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue End.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Objects/Furniture/Table.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.603922, 0.341176, 0.341176, 1 )
@@ -18,17 +34,6 @@ data = PoolVector3Array( -20, 1, 20, 20, 1, 20, -20, -1, 20, 20, 1, 20, 20, -1, 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 30, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5 )
-max_walk_speed = 4.0
-jump_speed = 7.0
-gravity = -11.0
-
-[node name="RigidBody" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0 )
-contacts_reported = 11
-contact_monitor = true
-
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24757, 0 )
 mesh = SubResource( 2 )
@@ -38,3 +43,80 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
 shape = SubResource( 3 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.982875, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="player" type="MeshInstance" parent="."]
+transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 5.70329, -0.207065, 0.0780182 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Red Bed" parent="Node" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1787, 0 )
+
+[node name="Blue Bed" parent="Node" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20758, 9.33782, 4.70268 )
+
+[node name="Green Bed" parent="Node" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5819, 9.09755, 6.09019 )
+
+[node name="White Bed" parent="Node" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17925, 4.41959, 6.46025 )
+
+[node name="Box1" parent="Node" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9567, 15.8772, -0.801894 )
+
+[node name="Box2" parent="Node" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31765, 15.517, 1.57609 )
+
+[node name="Box3" parent="Node" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5283, 17.9848, 3.09794 )
+
+[node name="Box4" parent="Node" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57124, 18.0976, -1.17371 )
+
+[node name="Chair1" parent="Node" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56916, 22.9737, 9.19501 )
+
+[node name="Chair2" parent="Node" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0316238, 26.9453, -0.228539 )
+
+[node name="Chair3" parent="Node" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.906799, 18.6312, -0.192932 )
+
+[node name="Rug" parent="Node" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.65478, 31.025, 6.03036 )
+mass = 0.1
+
+[node name="Plant" parent="Node" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52488, 5.95849, -6.02414 )
+
+[node name="Lamp" parent="Node" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.454677, 3.3866, -6.6447 )
+
+[node name="Chair4" parent="Node" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312974, 2.53957, -3.31521 )
+
+[node name="Chair5" parent="Node" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80156, 0.308764, -2.492 )
+
+[node name="Couch Blue End" parent="Node" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57709, 0.712965, -6.49792 )
+
+[node name="Couch Blue Corner" parent="Node" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0458078, 2.11301, -5.39746 )
+
+[node name="Table" parent="Node" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52932, 51.6329, 0.541996 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]

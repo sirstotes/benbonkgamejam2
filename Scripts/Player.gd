@@ -13,6 +13,7 @@ var velocity = Vector3()
 var looking = Vector3()
 var holding = false
 var largeCrosshair = false
+var ready_to_let_down = false
 onready var viewport = $"Viewport"
 onready var pickup_node = $"Viewport/Pickup"
 var crosshair : TextureRect
@@ -51,6 +52,11 @@ func _physics_process(delta):
 				result['collider'].ready_to_pick_up = true
 		else:
 			largeCrosshair = false
+	Input.is_action_just_pressed("player_pickup")
+	print(holding)
+	if ready_to_let_down:
+		holding = false
+		ready_to_let_down = false
 	if velocity.x > friction:
 		velocity.x -= friction
 	elif velocity.x < -friction:

@@ -36,17 +36,20 @@ func _physics_process(delta):
 		if distance.length() > 5:
 			picked = false
 			ready_to_pick_up = false
-			player.holding = false
+			player.ready_to_let_down = true
 		distance = pickup.global_transform.origin - self.global_transform.origin
 		linear_velocity = distance * 10
 		if Input.is_action_just_pressed("player_pickup"):
 			picked = false
 			ready_to_pick_up = false
+			player.ready_to_let_down = true
+			print('let me down')
 	elif ready_to_pick_up:
 		picked = true
 		ready_to_pick_up = false
 		Input.is_action_just_pressed("player_pickup")
 		angular_velocity = Vector3( 0, 0, 0 )
+		player.holding = true
 	else:
 		axis_lock_angular_x = false
 		axis_lock_angular_y = false
