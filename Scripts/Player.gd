@@ -19,11 +19,15 @@ var ready_to_let_down = false
 onready var viewport = $Viewport
 onready var pickup_node = $Viewport/Pickup
 onready var collision = $CollisionShape
+onready var root = $'..'
 var crosshair : TextureRect
+
+signal load_truck()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	crosshair = get_node_or_null(crosshairPath)
+	connect("load_truck", root, '_onLoadTruck')
 	
 func _input(event):
 	if event is InputEventMouseMotion and !Input.is_action_pressed("player_rotate"):
@@ -58,10 +62,15 @@ func _physics_process(delta):
 	if !holding:
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(global_transform.origin, pickup_node.global_transform.origin, [self])
-		if len(result) > 0 and result['collider'].is_in_group("Moving"):
-			largeCrosshair = true
-			if Input.is_action_just_pressed("player_pickup"):
-				result['collider'].ready_to_pick_up = true
+		if len(result) > 0:
+			if result['collider'].is_in_group("Moving"):
+				largeCrosshair = true
+				if Input.is_action_just_pressed("player_pickup"):
+					result['collider'].ready_to_pick_up = true	
+			if result['collider'].is_in_group("Dylan"):
+				largeCrosshair = true
+				if Input.is_action_just_pressed("player_pickup"):
+					emit_signal("load_truck")
 		else:
 			largeCrosshair = false
 		pickup_node.translation = Vector3(0, 0, -4)

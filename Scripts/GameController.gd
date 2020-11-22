@@ -20,10 +20,7 @@ func _process(delta):
 	time += 1
 	vibing += 0.01
 	vibing = clamp(vibing, 0, 7)
-	if Input.is_action_just_pressed("ui_focus_next") and vibing > 6.9:
-		vibing = 3
-		trips += 1
-	elif vibing < 6.9:
+	if vibing < 6.9:
 		emit_signal("set_time", vibing)
 		if vibing > 4.99 and vibing < 5.01:
 			_empty_truck()
@@ -53,3 +50,7 @@ func _onItemEnteredTruck(object):
 func _onItemExitedTruck(object):
 	if object.is_in_group("Moving"):
 		itemsInTruck.erase(object)
+func _onLoadTruck():
+	if vibing > 6.9:
+		vibing = 3
+		trips += 1
