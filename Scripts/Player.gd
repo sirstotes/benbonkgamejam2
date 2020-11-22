@@ -7,15 +7,19 @@ export(float) var jump_speed = 0
 export(float) var gravity = -50
 export(float) var sensitivity = 0.2
 export(float) var friction = 100
+export(NodePath) var crosshairPath
 
 var velocity = Vector3()
 var looking = Vector3()
 var holding = false
+var largeCrosshair = false
 onready var viewport = $"Viewport"
 onready var pickup_node = $"Viewport/Pickup"
+var crosshair : TextureRect
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	crosshair = get_node_or_null(crosshairPath)
 	
 func _input(event):
 	if event is InputEventMouseMotion and !Input.is_action_pressed("player_rotate"):
@@ -24,15 +28,30 @@ func _input(event):
 		looking.x = clamp(looking.x, -PI/3, PI/3)
 		viewport.rotation.y = looking.y
 		viewport.rotation.x = looking.x
-func _physics_process(delta):
-	
+	if Input.is_action_just_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if Input.is_action_just_pressed("player_pickup"):
-		if !holding:
-			var space_state = get_world().direct_space_state
-			var result = space_state.intersect_ray(global_transform.origin, pickup_node.global_transform.origin, [self])
-			if len(result) > 0:
-				if result['collider'].is_in_group("Moving"):
-					result['collider'].ready_to_pick_up = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func _process(delta):
+	if crosshair != null:
+		if largeCrosshair:
+			if crosshair.rect_size.x < 10:
+				crosshair.rect_size.x += delta*50
+				crosshair.rect_size.y = crosshair.rect_size.x
+		else:
+			if crosshair.rect_size.x > 5:
+				crosshair.rect_size.x -= delta*50
+				crosshair.rect_size.y = crosshair.rect_size.x
+func _physics_process(delta):
+	if !holding:
+		var space_state = get_world().direct_space_state
+		var result = space_state.intersect_ray(global_transform.origin, pickup_node.global_transform.origin, [self])
+		if len(result) > 0 and result['collider'].is_in_group("Moving"):
+			largeCrosshair = true
+			if Input.is_action_just_pressed("player_pickup"):
+				result['collider'].ready_to_pick_up = true
+		else:
+			largeCrosshair = false
 	if velocity.x > friction:
 		velocity.x -= friction
 	elif velocity.x < -friction:

@@ -2,8 +2,8 @@ extends RigidBody
 
 var velocity
 
-onready var pickup = $"../Player/Viewport/Pickup"
-onready var player = $"../Player"
+onready var pickup = $"/root/Spatial/Player/Viewport/Pickup"
+onready var player = $"/root/Spatial/Player"
 onready var my_mesh = $"mesh"
 
 var picked = false
@@ -39,7 +39,7 @@ func _physics_process(delta):
 			player.holding = false
 		distance = pickup.global_transform.origin - self.global_transform.origin
 		linear_velocity = distance * 10
-		if Input.is_action_just_pressed("player_pickup"):
+		if !Input.is_action_pressed("player_pickup"):
 			picked = false
 			ready_to_pick_up = false
 	elif ready_to_pick_up:
