@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/counter-corner.vox-28640b49415f0fcb17ad127a72930c97.mesh"
+
+[deps]
+
+source_file="res://Vox/counter-corner.vox"
+dest_files=[ "res://.import/counter-corner.vox-28640b49415f0fcb17ad127a72930c97.mesh" ]
+
+[params]
+
