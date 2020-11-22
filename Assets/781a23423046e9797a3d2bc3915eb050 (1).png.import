@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/mtl.PNG-659ecf6c8e767f79de03971b88f94dbf.s3tc.stex"
-path.etc2="res://.import/mtl.PNG-659ecf6c8e767f79de03971b88f94dbf.etc2.stex"
+path.s3tc="res://.import/781a23423046e9797a3d2bc3915eb050 (1).png-5816de1f80b192a062a6e955fec44993.s3tc.stex"
+path.etc2="res://.import/781a23423046e9797a3d2bc3915eb050 (1).png-5816de1f80b192a062a6e955fec44993.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mtl.PNG"
-dest_files=[ "res://.import/mtl.PNG-659ecf6c8e767f79de03971b88f94dbf.s3tc.stex", "res://.import/mtl.PNG-659ecf6c8e767f79de03971b88f94dbf.etc2.stex" ]
+source_file="res://Assets/781a23423046e9797a3d2bc3915eb050 (1).png"
+dest_files=[ "res://.import/781a23423046e9797a3d2bc3915eb050 (1).png-5816de1f80b192a062a6e955fec44993.s3tc.stex", "res://.import/781a23423046e9797a3d2bc3915eb050 (1).png-5816de1f80b192a062a6e955fec44993.etc2.stex" ]
 
 [params]
 
