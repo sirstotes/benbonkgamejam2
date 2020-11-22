@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/truckdoor.vox-b439c50a542a1a60129706cb20f0edec.mesh"
+
+[deps]
+
+source_file="res://Vox/truckdoor.vox"
+dest_files=[ "res://.import/truckdoor.vox-b439c50a542a1a60129706cb20f0edec.mesh" ]
+
+[params]
+

@@ -1,0 +1,1021 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Objects/Furniture/Boxes/Box4.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Furniture/Boxes/Box1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Vox/house.vox" type="ArrayMesh" id=4]
+[ext_resource path="res://Fonts/origami-mommy.regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scripts/Hedges.gd" type="Script" id=6]
+[ext_resource path="res://Vox/hedge.vox" type="ArrayMesh" id=7]
+[ext_resource path="res://Objects/Furniture/Doors/Door1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Furniture/Window.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/TitleController.gd" type="Script" id=10]
+[ext_resource path="res://Fonts/text.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Scripts/Slider.gd" type="Script" id=12]
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0, 0, 0.486275 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 0.584314 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 1, 0, 0, 0.435294 )
+
+[sub_resource type="StyleBoxLine" id=19]
+color = Color( 1, 1, 1, 1 )
+thickness = 5
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+size = Vector2( 1000, 1000 )
+
+[sub_resource type="SpatialMaterial" id=3]
+params_specular_mode = 3
+albedo_color = Color( 0.105882, 0.505882, 0.243137, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 500, 1, 500 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 18, 18, 1 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 1, 18, 23 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -350.0
+margin_top = -1.0
+margin_right = -1034.0
+custom_styles/panel = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -163.0
+margin_right = 330.0
+margin_bottom = -80.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 12 )
+text = "BOX BROS
+MOVING CO."
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/Control/Label"]
+margin_top = 100.0
+margin_right = 300.0
+margin_bottom = 125.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    PLAY"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelsButton" type="Button" parent="CanvasLayer/Control/Label"]
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 175.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    LEVEL SELECT"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/Control/Label"]
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 225.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    SETTINGS"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/Control/Label"]
+margin_top = 250.0
+margin_right = 300.0
+margin_bottom = 275.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    CREDITS"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/Label"]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    QUIT"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelect" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -350.0
+margin_top = -1.0
+margin_right = -1034.0
+custom_styles/panel = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/LevelSelect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -163.0
+margin_right = 330.0
+margin_bottom = -80.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 12 )
+text = "LEVEL
+SELECT"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="CanvasLayer/LevelSelect/Label"]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    BACK"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -350.0
+margin_top = -1.0
+margin_right = -1034.0
+custom_styles/panel = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -163.0
+margin_right = 330.0
+margin_bottom = -80.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 12 )
+text = "SETTINGS"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Settings/Label"]
+margin_top = 75.0
+margin_right = 271.0
+margin_bottom = 100.0
+custom_fonts/font = ExtResource( 11 )
+text = "Music Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider1" type="HSlider" parent="CanvasLayer/Settings/Label/Label2"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 41.0
+custom_styles/slider = SubResource( 19 )
+custom_styles/grabber_area = SubResource( 19 )
+min_value = -80.0
+max_value = 24.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Settings/Label"]
+margin_top = 125.0
+margin_right = 271.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 11 )
+text = "Audio Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider2" type="HSlider" parent="CanvasLayer/Settings/Label/Label3"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 41.0
+custom_styles/slider = SubResource( 19 )
+custom_styles/grabber_area = SubResource( 19 )
+min_value = -80.0
+max_value = 24.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+music = false
+
+[node name="BackButton" type="Button" parent="CanvasLayer/Settings/Label"]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    BACK"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -350.0
+margin_top = -1.0
+margin_right = -1034.0
+custom_styles/panel = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Credits"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -163.0
+margin_right = 330.0
+margin_bottom = -80.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 12 )
+text = "CREDITS"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Credits/Label"]
+margin_top = 75.0
+margin_right = 271.0
+margin_bottom = 268.0
+custom_fonts/font = ExtResource( 11 )
+text = "Programming
+-Dynamism
+Visual Design
+-Sirstotes
+Game Jam Host
+-BenBonk
+"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/Credits/Label"]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = ExtResource( 11 )
+text = "    BACK"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 10.0
+custom_styles/panel = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.882376, -0.112366, -0.456932, -0.357263, 0.79195, 0.495155, 0.306229, 0.600158, -0.738941, -9.1863, 8.63735, 2.65166 )
+light_energy = 2.13
+shadow_enabled = true
+shadow_color = Color( 0.286275, 0.231373, 0.231373, 1 )
+directional_shadow_mode = 0
+
+[node name="floor" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.15, -0.045 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="floor/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 4 )
+
+[node name="Boxes" type="Spatial" parent="."]
+
+[node name="Box1" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.901768, 0 )
+script = null
+
+[node name="Box3" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.811299, 0, -0.584632, 0, 1, 0, 0.584632, 0, 0.811299, 7.11239, 25.3785, 0 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box5" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.811299, 0, -0.584632, -0.524638, 0.441255, -0.728045, 0.257972, 0.897382, 0.35799, 7.11239, 28.5794, 1.75495 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box6" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.132857, 0.949774, -0.283336, -0.719824, -0.10405, -0.686314, -0.681324, 0.295134, 0.669846, 7.11239, 26.7461, -2.94738 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box9" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.749395, 0, -0.662123, 0, 1, 0, 0.662123, 0, -0.749395, 6.5309, 28.4163, -0.72791 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box8" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.430803, -0.875216, -0.220011, -0.524638, 0.441255, -0.728045, 0.734277, -0.198218, -0.649266, 4.8193, 31.6173, -1.11555 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box7" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.635149, -0.497634, -0.590716, -0.719824, -0.10405, -0.686314, 0.28007, 0.861124, -0.424296, 9.40549, 29.7839, -0.0768783 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box15" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.811299, 0, -0.584632, -0.580197, -0.122943, -0.805144, -0.0718766, 0.992414, -0.0997438, 7.11239, 35.6619, -3.76527 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box14" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.811299, 0, -0.584632, -0.191514, -0.944823, -0.265766, -0.552374, 0.327581, -0.766534, 7.11239, 33.5268, -0.80434 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box13" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.132857, 0.949774, -0.283336, 0.764653, -0.280102, -0.580387, -0.630599, -0.139545, -0.763461, 7.11239, 38.4188, -2.04564 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box12" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.749395, 0, -0.662123, -0.6571, -0.122943, 0.74371, -0.0814036, 0.992414, 0.0921331, 6.5309, 36.0108, -0.660965 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box11" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.430803, -0.875216, -0.220011, -0.664206, 0.142465, 0.733849, -0.610933, 0.462277, -0.642698, 4.8193, 36.002, 2.56339 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box10" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.635149, -0.497634, -0.590716, -0.189447, -0.841799, 0.505455, -0.748796, -0.20913, -0.628943, 9.40549, 35.1966, 0.616259 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box27" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.576133, -0.0186073, -0.817144, -0.709605, -0.484749, 0.51135, -0.405624, 0.874456, 0.266076, 9.08114, 50.2151, -6.31533 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box26" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.239785, -0.905389, -0.350391, -0.455288, -0.213898, 0.864269, -0.857448, 0.366767, -0.360923, 7.26702, 48.6634, -3.55356 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box25" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.695934, -0.283336, -0.659846, 0.23273, -0.780285, 0.580511, -0.679347, -0.557563, -0.477086, 12.0024, 49.5521, -5.05669 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box24" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.669702, -0.0186073, 0.742397, 0.655461, -0.484749, 0.579128, 0.3491, 0.874456, 0.336833, 9.74636, 49.2511, -3.36156 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box23" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.728792, 0.180937, 0.660397, 0.631121, 0.551613, 0.545352, -0.26561, 0.814239, -0.516204, 10.0567, 49.1965, 0.275306 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box22" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( -0.260062, -0.864124, 0.430879, -0.206602, 0.485696, 0.849362, -0.94323, 0.131867, -0.304841, 9.09967, 46.0739, -3.5726 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box21" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.0910228, -0.989901, 0.108674, -0.428356, 0.0595966, 0.901643, -0.899014, -0.128621, -0.418605, 12.6542, 45.2302, 2.75722 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box20" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.564179, -0.309926, 0.765276, -0.616769, 0.458002, 0.64018, -0.548906, -0.833175, 0.0672424, 9.73368, 46.2652, 0.827111 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box19" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.617598, 0.15452, 0.771165, -0.486868, -0.694943, 0.529162, 0.617683, -0.702266, -0.353965, 8.43544, 43.8938, 5.1314 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box18" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.0858839, -0.989901, -0.112779, 0.973989, 0.0595966, 0.218616, -0.209687, -0.128621, 0.969272, 7.08989, 45.5697, 3.27809 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box17" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.618711, -0.473849, 0.626629, 0.698777, 0.696451, -0.163299, -0.359038, 0.538909, 0.762017, 11.0233, 47.071, 4.03128 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box16" parent="Boxes" instance=ExtResource( 3 )]
+transform = Transform( 0.758702, 0.219614, 0.613304, -0.463701, 0.843318, 0.271653, -0.457551, -0.490494, 0.741662, 5.85775, 43.4501, 1.14577 )
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+script = null
+
+[node name="Box2" parent="Boxes" instance=ExtResource( 2 )]
+transform = Transform( 0.970266, 0, 0.24204, 0, 1, 0, -0.24204, 0, 0.970266, 0.653799, 9.59488, -1.89535 )
+script = null
+
+[node name="Box4" parent="Boxes" instance=ExtResource( 1 )]
+transform = Transform( 0.912692, 0, -0.408649, 0, 1, 0, 0.408649, 0, 0.912692, 0, 16.6057, 2.38053 )
+script = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -4.96783, 0.844185, 0 )
+
+[node name="house1" type="MeshInstance" parent="."]
+transform = Transform( -1.62921e-08, 0, 0.1, 0, 0.1, 0, -0.1, 0, -1.62921e-08, 19.051, 0.15, 0.787859 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Hedges" type="StaticBody" parent="."]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18, 0, 5 )
+script = ExtResource( 6 )
+
+[node name="hedge" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0951472, 0, 0.030774, 0, 0.1, 0, -0.030774, 0, 0.0951472, 0, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge2" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0999026, 0, 0.00441528, 0, 0.1, 0, -0.00441528, 0, 0.0999026, -2, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge3" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0924455, 0, 0.0381293, 0, 0.1, 0, -0.0381293, 0, 0.0924455, -4, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge4" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.088616, 0, 0.0463382, 0, 0.1, 0, -0.0463382, 0, 0.088616, -6, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge5" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0879845, 0, 0.047526, 0, 0.1, 0, -0.047526, 0, 0.0879845, -8, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge14" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.096557, 0, 0.0260147, 0, 0.1, 0, -0.0260147, 0, 0.096557, -10, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge50" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0909448, 0, 0.0415824, 0, 0.1, 0, -0.0415824, 0, 0.0909448, 0, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge49" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0923997, 0, 0.0382395, 0, 0.1, 0, -0.0382395, 0, 0.0923997, -2, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge48" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0968731, 0, 0.0248108, 0, 0.1, 0, -0.0248108, 0, 0.0968731, -4, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge47" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0995775, 0, 0.00918342, 0, 0.1, 0, -0.00918342, 0, 0.0995775, -6, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge46" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0881604, 0, 0.0471988, 0, 0.1, 0, -0.0471988, 0, 0.0881604, -8, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge45" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0963348, 0, 0.0268263, 0, 0.1, 0, -0.0268263, 0, 0.0963348, -10, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge17" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0982982, 0, 0.0183701, 0, 0.1, 0, -0.0183701, 0, 0.0982982, -12, 0, 6 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge18" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0994087, 0, 0.0108583, 0, 0.1, 0, -0.0108583, 0, 0.0994087, -12, 0, 4 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge20" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0896285, 0, 0.0443474, 0, 0.1, 0, -0.0443474, 0, 0.0896285, -12, 0, 0 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge21" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0980621, 0, 0.0195918, 0, 0.1, 0, -0.0195918, 0, 0.0980621, -12, 0, -2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge22" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0933658, 0, 0.0358163, 0, 0.1, 0, -0.0358163, 0, 0.0933658, -12, 0, -4 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge23" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0964023, 0, 0.0265815, 0, 0.1, 0, -0.0265815, 0, 0.0964023, -12, 0, -6 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge24" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0991206, 0, 0.0132311, 0, 0.1, 0, -0.0132311, 0, 0.0991206, -12, 0, -8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge25" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0999627, 0, 0.00272785, 0, 0.1, 0, -0.00272785, 0, 0.0999627, -12, 0, -10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge26" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0920628, 0, 0.0390445, 0, 0.1, 0, -0.0390445, 0, 0.0920628, -12, 0, -12 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge27" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0971019, 0, 0.0238988, 0, 0.1, 0, -0.0238988, 0, 0.0971019, -12, 0, -14 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge28" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0999905, 0, 0.00138414, 0, 0.1, 0, -0.00138414, 0, 0.0999905, -12, 0, -16 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge30" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0991068, 0, 0.0133353, 0, 0.1, 0, -0.0133353, 0, 0.0991068, -12, 0, -20 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge32" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0955181, 0, 0.0296025, 0, 0.1, 0, -0.0296025, 0, 0.0955181, -12, 0, -24 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge33" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0886972, 0, 0.0461823, 0, 0.1, 0, -0.0461823, 0, 0.0886972, -12, 0, -26 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge34" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0927639, 0, 0.0373479, 0, 0.1, 0, -0.0373479, 0, 0.0927639, -12, 0, -28 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge36" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0918787, 0, 0.0394755, 0, 0.1, 0, -0.0394755, 0, 0.0918787, -12, 0, -32 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge37" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0945477, 0, 0.0325685, 0, 0.1, 0, -0.0325685, 0, 0.0945477, -12, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge73" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0978815, 0, 0.0204748, 0, 0.1, 0, -0.0204748, 0, 0.0978815, -12, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge97" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0959065, 0, 0.028319, 0, 0.1, 0, -0.028319, 0, 0.0959065, 22, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge96" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0961635, 0, 0.0274327, 0, 0.1, 0, -0.0274327, 0, 0.0961635, 22, 0, 8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge95" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0939099, 0, 0.0343652, 0, 0.1, 0, -0.0343652, 0, 0.0939099, 22, 0, 6 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge94" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0949937, 0, 0.0312439, 0, 0.1, 0, -0.0312439, 0, 0.0949937, 22, 0, 4 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge93" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0935967, 0, 0.0352091, 0, 0.1, 0, -0.0352091, 0, 0.0935967, 22, 0, 2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge92" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0969869, 0, 0.0243625, 0, 0.1, 0, -0.0243625, 0, 0.0969869, 22, 0, 0 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge91" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0998862, 0, 0.00477062, 0, 0.1, 0, -0.00477062, 0, 0.0998862, 22, 0, -2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge90" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0902901, 0, 0.0429848, 0, 0.1, 0, -0.0429848, 0, 0.0902901, 22, 0, -4 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge89" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.088697, 0, 0.0461832, 0, 0.1, 0, -0.0461832, 0, 0.088697, 22, 0, -6 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge88" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.095617, 0, 0.0292816, 0, 0.1, 0, -0.0292816, 0, 0.095617, 22, 0, -8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge87" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0997276, 0, 0.00737581, 0, 0.1, 0, -0.00737581, 0, 0.0997276, 22, 0, -10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge86" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0888845, 0, 0.0458211, 0, 0.1, 0, -0.0458211, 0, 0.0888845, 22, 0, -12 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge85" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0997991, 0, 0.00633543, 0, 0.1, 0, -0.00633543, 0, 0.0997991, 22, 0, -14 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge84" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0884673, 0, 0.046621, 0, 0.1, 0, -0.046621, 0, 0.0884673, 22, 0, -16 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge83" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0961581, 0, 0.0274523, 0, 0.1, 0, -0.0274523, 0, 0.0961581, 22, 0, -18 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge82" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0947958, 0, 0.0318395, 0, 0.1, 0, -0.0318395, 0, 0.0947958, 22, 0, -20 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge81" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.099387, 0, 0.0110554, 0, 0.1, 0, -0.0110554, 0, 0.099387, 22, 0, -22 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge80" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0979795, 0, 0.0199998, 0, 0.1, 0, -0.0199998, 0, 0.0979795, 22, 0, -24 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge79" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0929811, 0, 0.0368032, 0, 0.1, 0, -0.0368032, 0, 0.0929811, 22, 0, -26 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge78" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.090907, 0, 0.0416643, 0, 0.1, 0, -0.0416643, 0, 0.090907, 22, 0, -28 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge77" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0899006, 0, 0.0437937, 0, 0.1, 0, -0.0437937, 0, 0.0899006, 22, 0, -30 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge76" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0968967, 0, 0.024719, 0, 0.1, 0, -0.024719, 0, 0.0968967, 22, 0, -32 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge75" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0965696, 0, 0.0259668, 0, 0.1, 0, -0.0259668, 0, 0.0965696, 22, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge74" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0927603, 0, 0.0373562, 0, 0.1, 0, -0.0373562, 0, 0.0927603, 22, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge72" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0968451, 0, 0.0249203, 0, 0.1, 0, -0.0249203, 0, 0.0968451, -12, 0, 8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge69" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.099971, 0, 0.00241252, 0, 0.1, 0, -0.00241252, 0, 0.099971, -12, 0, 2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge59" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0992544, 0, 0.0121882, 0, 0.1, 0, -0.0121882, 0, 0.0992544, -12, 0, -18 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge57" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0878, 0, 0.0478661, 0, 0.1, 0, -0.0478661, 0, 0.0878, -12, 0, -22 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge53" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0952672, 0, 0.0303991, 0, 0.1, 0, -0.0303991, 0, 0.0952672, -12, 0, -30 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge52" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0995612, 0, 0.0093591, 0, 0.1, 0, -0.0093591, 0, 0.0995612, -12, 0, -32 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge51" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0982968, 0, 0.0183782, 0, 0.1, 0, -0.0183782, 0, 0.0982968, -12, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge6" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0964274, 0, 0.0264912, 0, 0.1, 0, -0.0264912, 0, 0.0964274, 2, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge7" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0931336, 0, 0.0364162, 0, 0.1, 0, -0.0364162, 0, 0.0931336, 4, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge8" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0925302, 0, 0.0379232, 0, 0.1, 0, -0.0379232, 0, 0.0925302, 6, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge9" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0924382, 0, 0.0381467, 0, 0.1, 0, -0.0381467, 0, 0.0924382, 8, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge10" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0935034, 0, 0.0354561, 0, 0.1, 0, -0.0354561, 0, 0.0935034, 10, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge11" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0921096, 0, 0.0389334, 0, 0.1, 0, -0.0389334, 0, 0.0921096, 12, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge12" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0915336, 0, 0.0402689, 0, 0.1, 0, -0.0402689, 0, 0.0915336, 14, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge100" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0997666, 0, 0.00682639, 0, 0.1, 0, -0.00682639, 0, 0.0997666, 16, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge99" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0910743, 0, 0.0412977, 0, 0.1, 0, -0.0412977, 0, 0.0910743, 18, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge98" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0914179, 0, 0.0405305, 0, 0.1, 0, -0.0405305, 0, 0.0914179, 20, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge44" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0954858, 0, 0.0297065, 0, 0.1, 0, -0.0297065, 0, 0.0954858, 2, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge43" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0999708, 0, 0.00241281, 0, 0.1, 0, -0.00241281, 0, 0.0999708, 4, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge42" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0970484, 0, 0.0241164, 0, 0.1, 0, -0.0241164, 0, 0.0970484, 6, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge41" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0985336, 0, 0.0170638, 0, 0.1, 0, -0.0170638, 0, 0.0985336, 8, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge40" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0982376, 0, 0.0186913, 0, 0.1, 0, -0.0186913, 0, 0.0982376, 10, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge39" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.099593, 0, 0.00901451, 0, 0.1, 0, -0.00901451, 0, 0.099593, 12, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge38" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0940518, 0, 0.0339741, 0, 0.1, 0, -0.0339741, 0, 0.0940518, 14, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge103" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0891105, 0, 0.0453793, 0, 0.1, 0, -0.0453793, 0, 0.0891105, 16, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge102" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0998968, 0, 0.00454088, 0, 0.1, 0, -0.00454088, 0, 0.0998968, 18, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge101" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0884435, 0, 0.0466665, 0, 0.1, 0, -0.0466665, 0, 0.0884435, 20, 0, -34 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="hedge13" type="MeshInstance" parent="Hedges"]
+transform = Transform( 0.0883294, 0, 0.0468819, 0, 0.1, 0, -0.0468819, 0, 0.0883294, 14, 0, 10 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Hedges"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 10 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Hedges"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -34 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Hedges"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, -12 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Hedges"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2, -12 )
+shape = SubResource( 11 )
+
+[node name="Door1" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13, 1.75, 2.8 )
+mode = 1
+script = null
+
+[node name="Window" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13, 2.3, 6.8 )
+mode = 1
+script = null
+
+[node name="Window2" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11, 2.3, -3.2 )
+mode = 1
+script = null
+[connection signal="pressed" from="CanvasLayer/Control/Label/PlayButton" to="." method="_changeScene" binds= [ "res://Scenes/house.tscn" ]]
+[connection signal="pressed" from="CanvasLayer/Control/Label/LevelsButton" to="." method="_levelSelect"]
+[connection signal="pressed" from="CanvasLayer/Control/Label/SettingsButton" to="." method="_settings"]
+[connection signal="pressed" from="CanvasLayer/Control/Label/CreditsButton" to="." method="_credits"]
+[connection signal="pressed" from="CanvasLayer/Control/Label/QuitButton" to="." method="_quit"]
+[connection signal="pressed" from="CanvasLayer/LevelSelect/Label/BackButton" to="." method="_main"]
+[connection signal="pressed" from="CanvasLayer/Settings/Label/BackButton" to="." method="_main"]
+[connection signal="pressed" from="CanvasLayer/Credits/Label/BackButton" to="." method="_main"]
