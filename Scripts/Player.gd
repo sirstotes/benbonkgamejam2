@@ -30,10 +30,6 @@ func _input(event):
 		viewport.rotation.x = looking.x
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-func _physics_process(delta):
-	velocity.y += gravity * delta
-	if Input.is_action_just_pressed("player_pickup"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 func _process(delta):
 	if crosshair != null:
 		if largeCrosshair:
@@ -45,6 +41,7 @@ func _process(delta):
 				crosshair.rect_size.x -= delta*50
 				crosshair.rect_size.y = crosshair.rect_size.x
 func _physics_process(delta):
+	velocity.y += gravity * delta
 	if !holding:
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(global_transform.origin, pickup_node.global_transform.origin, [self])
