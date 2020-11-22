@@ -34,6 +34,8 @@ func _input(event):
 		viewport.rotation.x = looking.x
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Input.is_action_just_pressed("player_pickup"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 func _process(delta):
 	if crosshair != null:
 		if largeCrosshair:

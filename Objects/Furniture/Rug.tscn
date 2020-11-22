@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Pickable Object.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 1.4, 0.05, 1.4 )
+extents = Vector3( 1, 0.05, 1 )
 
 [node name="Rug" type="RigidBody"]
 continuous_cd = true

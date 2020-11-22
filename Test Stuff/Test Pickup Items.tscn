@@ -19,6 +19,7 @@
 [ext_resource path="res://Objects/Furniture/Chairs/Couch Blue End.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Objects/Furniture/Tables/Table.tscn" type="PackedScene" id=18]
 
+
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.603922, 0.341176, 0.341176, 1 )
 

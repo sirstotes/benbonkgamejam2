@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/path-cross.vox-63d382b1dcb4dbeafaa8dd96965fc9ac.mesh"
+
+[deps]
+
+source_file="res://Vox/path-cross.vox"
+dest_files=[ "res://.import/path-cross.vox-63d382b1dcb4dbeafaa8dd96965fc9ac.mesh" ]
+
+[params]
+

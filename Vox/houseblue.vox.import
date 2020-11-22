@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/houseblue.vox-9579a06ded6e3121f296b21552d61925.mesh"
+
+[deps]
+
+source_file="res://Vox/houseblue.vox"
+dest_files=[ "res://.import/houseblue.vox-9579a06ded6e3121f296b21552d61925.mesh" ]
+
+[params]
+

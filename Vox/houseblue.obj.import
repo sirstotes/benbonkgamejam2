@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/houseblue.obj-0928941d02ed68ea2adbf4e6212b14a1.mesh"
+
+[deps]
+
+files=[ "res://.import/houseblue.obj-0928941d02ed68ea2adbf4e6212b14a1.mesh" ]
+
+source_file="res://Vox/houseblue.obj"
+dest_files=[ "res://.import/houseblue.obj-0928941d02ed68ea2adbf4e6212b14a1.mesh", "res://.import/houseblue.obj-0928941d02ed68ea2adbf4e6212b14a1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
