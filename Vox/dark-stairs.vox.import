@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/dark-stairs.vox-663cfcd147573333f0c8bad5ffe9d2ae.mesh"
+
+[deps]
+
+source_file="res://Vox/dark-stairs.vox"
+dest_files=[ "res://.import/dark-stairs.vox-663cfcd147573333f0c8bad5ffe9d2ae.mesh" ]
+
+[params]
+

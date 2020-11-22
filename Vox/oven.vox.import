@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/oven.vox-f370dabeade43583f75ba63348aacf47.mesh"
+
+[deps]
+
+source_file="res://Vox/oven.vox"
+dest_files=[ "res://.import/oven.vox-f370dabeade43583f75ba63348aacf47.mesh" ]
+
+[params]
+

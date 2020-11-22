@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/light-stairs.vox-5043784be00ae330bb39b889919ffc9d.mesh"
+
+[deps]
+
+source_file="res://Vox/light-stairs.vox"
+dest_files=[ "res://.import/light-stairs.vox-5043784be00ae330bb39b889919ffc9d.mesh" ]
+
+[params]
+
