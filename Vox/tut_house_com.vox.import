@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/tut_house_com.vox-591c4fa7539fc3ebaf78e61b73231ca1.mesh"
+
+[deps]
+
+source_file="res://Vox/tut_house_com.vox"
+dest_files=[ "res://.import/tut_house_com.vox-591c4fa7539fc3ebaf78e61b73231ca1.mesh" ]
+
+[params]
+

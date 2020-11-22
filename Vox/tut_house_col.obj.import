@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tut_house_col.obj-80a81c6f960ddc180564d5c4f2be73ba.mesh"
+
+[deps]
+
+files=[ "res://.import/tut_house_col.obj-80a81c6f960ddc180564d5c4f2be73ba.mesh" ]
+
+source_file="res://Vox/tut_house_col.obj"
+dest_files=[ "res://.import/tut_house_col.obj-80a81c6f960ddc180564d5c4f2be73ba.mesh", "res://.import/tut_house_col.obj-80a81c6f960ddc180564d5c4f2be73ba.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
