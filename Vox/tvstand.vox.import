@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/tvstand.vox-ad786c35fa6aeafa2ab645f7b4ff737a.mesh"
+
+[deps]
+
+source_file="res://Vox/tvstand.vox"
+dest_files=[ "res://.import/tvstand.vox-ad786c35fa6aeafa2ab645f7b4ff737a.mesh" ]
+
+[params]
+
