@@ -8,7 +8,7 @@ export(float) var gravity = -50
 export(float) var sensitivity = 0.2
 export(float) var friction = 100
 export(float) var uncrouch_height = 1
-export(float) var crouch_height = 1
+export(float) var crouch_height = 0.0
 export(NodePath) var crosshairPath
 
 var velocity = Vector3()
@@ -16,8 +16,8 @@ var looking = Vector3()
 var holding = false
 var largeCrosshair = false
 var ready_to_let_down = false
-onready var viewport = $"Viewport"
-onready var pickup_node = $"Viewport/Pickup"
+onready var viewport = $Viewport
+onready var pickup_node = $Viewport/Pickup
 onready var collision = $CollisionShape
 var crosshair : TextureRect
 
@@ -56,11 +56,12 @@ func _physics_process(delta):
 		else:
 			largeCrosshair = false
 	Input.is_action_just_pressed("player_pickup")
+	var capsule = collision.get_shape()
 	if Input.is_action_pressed("player_crouch"):
-		collision.get_shape().height = crouch_height
+		capsule.height = crouch_height
 	else:
-		collision.get_shape().height = uncrouch_height
-	print(holding)
+		capsule.height = uncrouch_height
+	collision.set_shape(capsule)
 	if ready_to_let_down:
 		holding = false
 		ready_to_let_down = false
