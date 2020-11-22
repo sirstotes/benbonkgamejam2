@@ -14,7 +14,6 @@
 [ext_resource path="res://Objects/Furniture/Boxes/Box3.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Furniture/Lamp.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Vox/controls.obj" type="ArrayMesh" id=17]
 [ext_resource path="res://Objects/Furniture/Rug.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Objects/Furniture/Beds/Blue Bed.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=24]
@@ -556,7 +555,7 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 18.9, 0 )
 shape = SubResource( 12 )
 
 [node name="Player" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.132404, 2.24124, -14.1884 )
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.07165, 2.24124, -21.2677 )
 max_walk_speed = 6.0
 jump_speed = 7.0
 gravity = -20.0
