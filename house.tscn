@@ -265,7 +265,7 @@ transform = Transform( 0.957868, 0, -0.28721, 0, 1, 0, 0.28721, 0, 0.957868, 2.1
 transform = Transform( 0.992258, 0, -0.12419, 0, 1, 0, 0.12419, 0, 0.992258, 2.03742, 1.9, -7.95829 )
 
 [node name="Box6" parent="Objects" instance=ExtResource( 12 )]
-transform = Transform( -0.442962, 0, 0.89654, 0, 1, 0, -0.89654, 0, -0.442962, 4.85984, 1.00023, -10.4873 )
+transform = Transform( 0.940371, 0, 0.34015, 0, 1, 0, -0.34015, 0, 0.940371, -3.21424, 1.00023, -6.1995 )
 
 [node name="Box7" parent="Objects" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12399, 0.7, 2.35077 )
@@ -884,5 +884,9 @@ crosshairPath = NodePath("../CanvasLayer/Control/TextureRect")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 autoplay = true
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55281, 0 )
+max_walk_speed = 4.0
 [connection signal="body_entered" from="truck/Area" to="." method="_onItemEnteredTruck"]
 [connection signal="body_exited" from="truck/Area" to="." method="_onItemExitedTruck"]
