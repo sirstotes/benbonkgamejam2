@@ -185,5 +185,6 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55281, 0 )
+max_walk_speed = 4.0
 [connection signal="body_entered" from="truck/Area" to="." method="_onItemEnteredTruck"]
 [connection signal="body_exited" from="truck/Area" to="." method="_onItemExitedTruck"]
