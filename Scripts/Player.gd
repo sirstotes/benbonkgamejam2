@@ -89,6 +89,3 @@ func _physics_process(delta):
 		walkvector = walkvector.clamped(max_walk_speed)
 	velocity = Vector3(walkvector.x, velocity.y, -walkvector.y)
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0), false, 4, 0.785398, false)
-	
-
-
