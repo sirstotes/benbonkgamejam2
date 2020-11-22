@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Level3Combined.vox-b22b33a7d5f8829a8fcfa6e023cbdc14.mesh"
+
+[deps]
+
+source_file="res://Vox/Level3Combined.vox"
+dest_files=[ "res://.import/Level3Combined.vox-b22b33a7d5f8829a8fcfa6e023cbdc14.mesh" ]
+
+[params]
+

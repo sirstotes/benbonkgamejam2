@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Level3Simple.vox-81ebaf4f095fd4ab7c3a9257651e5059.mesh"
+
+[deps]
+
+source_file="res://Vox/Level3Simple.vox"
+dest_files=[ "res://.import/Level3Simple.vox-81ebaf4f095fd4ab7c3a9257651e5059.mesh" ]
+
+[params]
+

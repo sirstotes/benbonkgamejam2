@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Objects/Furniture/Boxes/Box4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Scripts/TitleController.gd" type="Script" id=10]
 [ext_resource path="res://Fonts/text.tres" type="DynamicFont" id=11]
 [ext_resource path="res://Scripts/Slider.gd" type="Script" id=12]
+[ext_resource path="res://Vox/isaac.vox" type="ArrayMesh" id=13]
+[ext_resource path="res://Vox/dylan.vox" type="ArrayMesh" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.486275 )
@@ -572,412 +574,412 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18, 0, 
 script = ExtResource( 6 )
 
 [node name="hedge" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0904077, 0, 0.0427373, 0, 0.1, 0, -0.0427373, 0, 0.0904077, 0, 0, 10 )
+transform = Transform( 0.0931792, 0, 0.0362997, 0, 0.1, 0, -0.0362997, 0, 0.0931792, 0, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge2" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0990401, 0, 0.0138231, 0, 0.1, 0, -0.0138231, 0, 0.0990401, -2, 0, 10 )
+transform = Transform( 0.0997499, 0, 0.00706985, 0, 0.1, 0, -0.00706985, 0, 0.0997499, -2, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge3" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0994739, 0, 0.0102447, 0, 0.1, 0, -0.0102447, 0, 0.0994739, -4, 0, 10 )
+transform = Transform( 0.0973733, 0, 0.0227695, 0, 0.1, 0, -0.0227695, 0, 0.0973733, -4, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge4" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.091466, 0, 0.0404228, 0, 0.1, 0, -0.0404228, 0, 0.091466, -6, 0, 10 )
+transform = Transform( 0.0999601, 0, 0.00282733, 0, 0.1, 0, -0.00282733, 0, 0.0999601, -6, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge5" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0960431, 0, 0.0278516, 0, 0.1, 0, -0.0278516, 0, 0.0960431, -8, 0, 10 )
+transform = Transform( 0.0987892, 0, 0.0155141, 0, 0.1, 0, -0.0155141, 0, 0.0987892, -8, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge14" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999991, 0, 0.000450081, 0, 0.1, 0, -0.000450081, 0, 0.0999991, -10, 0, 10 )
+transform = Transform( 0.0997506, 0, 0.0070588, 0, 0.1, 0, -0.0070588, 0, 0.0997506, -10, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge50" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0879314, 0, 0.0476247, 0, 0.1, 0, -0.0476247, 0, 0.0879314, 0, 0, -34 )
+transform = Transform( 0.0982098, 0, 0.0188382, 0, 0.1, 0, -0.0188382, 0, 0.0982098, 0, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge49" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0893141, 0, 0.0449773, 0, 0.1, 0, -0.0449773, 0, 0.0893141, -2, 0, -34 )
+transform = Transform( 0.0992124, 0, 0.0125244, 0, 0.1, 0, -0.0125244, 0, 0.0992124, -2, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge48" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999535, 0, 0.00304346, 0, 0.1, 0, -0.00304346, 0, 0.0999535, -4, 0, -34 )
+transform = Transform( 0.0953488, 0, 0.0301427, 0, 0.1, 0, -0.0301427, 0, 0.0953488, -4, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge47" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0930863, 0, 0.0365371, 0, 0.1, 0, -0.0365371, 0, 0.0930863, -6, 0, -34 )
+transform = Transform( 0.0964069, 0, 0.0265653, 0, 0.1, 0, -0.0265653, 0, 0.0964069, -6, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge46" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0944421, 0, 0.0328736, 0, 0.1, 0, -0.0328736, 0, 0.0944421, -8, 0, -34 )
+transform = Transform( 0.0994721, 0, 0.0102612, 0, 0.1, 0, -0.0102612, 0, 0.0994721, -8, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge45" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0956584, 0, 0.0291466, 0, 0.1, 0, -0.0291466, 0, 0.0956584, -10, 0, -34 )
+transform = Transform( 0.0922564, 0, 0.038585, 0, 0.1, 0, -0.038585, 0, 0.0922564, -10, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge17" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0914241, 0, 0.040517, 0, 0.1, 0, -0.040517, 0, 0.0914241, -12, 0, 6 )
+transform = Transform( 0.0997783, 0, 0.00665498, 0, 0.1, 0, -0.00665498, 0, 0.0997783, -12, 0, 6 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge18" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0996471, 0, 0.00839375, 0, 0.1, 0, -0.00839375, 0, 0.0996471, -12, 0, 4 )
+transform = Transform( 0.0999977, 0, 0.000670932, 0, 0.1, 0, -0.000670932, 0, 0.0999977, -12, 0, 4 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge20" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0949644, 0, 0.0313325, 0, 0.1, 0, -0.0313325, 0, 0.0949644, -12, 0, 0 )
+transform = Transform( 0.0883837, 0, 0.046779, 0, 0.1, 0, -0.046779, 0, 0.0883837, -12, 0, 0 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge21" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0994208, 0, 0.0107484, 0, 0.1, 0, -0.0107484, 0, 0.0994208, -12, 0, -2 )
+transform = Transform( 0.0985017, 0, 0.0172459, 0, 0.1, 0, -0.0172459, 0, 0.0985017, -12, 0, -2 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge22" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0995318, 0, 0.00966437, 0, 0.1, 0, -0.00966437, 0, 0.0995318, -12, 0, -4 )
+transform = Transform( 0.088605, 0, 0.0463588, 0, 0.1, 0, -0.0463588, 0, 0.088605, -12, 0, -4 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge23" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0945655, 0, 0.0325169, 0, 0.1, 0, -0.0325169, 0, 0.0945655, -12, 0, -6 )
+transform = Transform( 0.0980016, 0, 0.0198914, 0, 0.1, 0, -0.0198914, 0, 0.0980016, -12, 0, -6 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge24" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0977842, 0, 0.0209333, 0, 0.1, 0, -0.0209333, 0, 0.0977842, -12, 0, -8 )
+transform = Transform( 0.0951678, 0, 0.030709, 0, 0.1, 0, -0.030709, 0, 0.0951678, -12, 0, -8 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge25" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0981873, 0, 0.0189534, 0, 0.1, 0, -0.0189534, 0, 0.0981873, -12, 0, -10 )
+transform = Transform( 0.0925228, 0, 0.0379409, 0, 0.1, 0, -0.0379409, 0, 0.0925228, -12, 0, -10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge26" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0892538, 0, 0.0450976, 0, 0.1, 0, -0.0450976, 0, 0.0892538, -12, 0, -12 )
+transform = Transform( 0.0987762, 0, 0.0155979, 0, 0.1, 0, -0.0155979, 0, 0.0987762, -12, 0, -12 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge27" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0996475, 0, 0.00838538, 0, 0.1, 0, -0.00838538, 0, 0.0996475, -12, 0, -14 )
+transform = Transform( 0.099813, 0, 0.00610655, 0, 0.1, 0, -0.00610655, 0, 0.099813, -12, 0, -14 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge28" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.090644, 0, 0.0422335, 0, 0.1, 0, -0.0422335, 0, 0.090644, -12, 0, -16 )
+transform = Transform( 0.0995317, 0, 0.00966777, 0, 0.1, 0, -0.00966777, 0, 0.0995317, -12, 0, -16 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge30" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0971472, 0, 0.0237154, 0, 0.1, 0, -0.0237154, 0, 0.0971472, -12, 0, -20 )
+transform = Transform( 0.0927472, 0, 0.0373892, 0, 0.1, 0, -0.0373892, 0, 0.0927472, -12, 0, -20 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge32" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0957315, 0, 0.028905, 0, 0.1, 0, -0.028905, 0, 0.0957315, -12, 0, -24 )
+transform = Transform( 0.0990145, 0, 0.014005, 0, 0.1, 0, -0.014005, 0, 0.0990145, -12, 0, -24 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge33" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0972557, 0, 0.0232663, 0, 0.1, 0, -0.0232663, 0, 0.0972557, -12, 0, -26 )
+transform = Transform( 0.0991068, 0, 0.0133358, 0, 0.1, 0, -0.0133358, 0, 0.0991068, -12, 0, -26 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge34" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0946979, 0, 0.0321298, 0, 0.1, 0, -0.0321298, 0, 0.0946979, -12, 0, -28 )
+transform = Transform( 0.0951667, 0, 0.0307132, 0, 0.1, 0, -0.0307132, 0, 0.0951667, -12, 0, -28 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge36" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0885746, 0, 0.0464171, 0, 0.1, 0, -0.0464171, 0, 0.0885746, -12, 0, -32 )
+transform = Transform( 0.0898526, 0, 0.0438921, 0, 0.1, 0, -0.0438921, 0, 0.0898526, -12, 0, -32 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge37" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.088984, 0, 0.045627, 0, 0.1, 0, -0.045627, 0, 0.088984, -12, 0, -34 )
+transform = Transform( 0.0966644, 0, 0.0256118, 0, 0.1, 0, -0.0256118, 0, 0.0966644, -12, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge73" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0926277, 0, 0.0376844, 0, 0.1, 0, -0.0376844, 0, 0.0926277, -12, 0, 10 )
+transform = Transform( 0.0938682, 0, 0.0344785, 0, 0.1, 0, -0.0344785, 0, 0.0938682, -12, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge97" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.099984, 0, 0.00179349, 0, 0.1, 0, -0.00179349, 0, 0.099984, 22, 0, 10 )
+transform = Transform( 0.0897071, 0, 0.044189, 0, 0.1, 0, -0.044189, 0, 0.0897071, 22, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge96" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0984164, 0, 0.0177252, 0, 0.1, 0, -0.0177252, 0, 0.0984164, 22, 0, 8 )
+transform = Transform( 0.0912534, 0, 0.0408997, 0, 0.1, 0, -0.0408997, 0, 0.0912534, 22, 0, 8 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge95" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0998164, 0, 0.0060595, 0, 0.1, 0, -0.0060595, 0, 0.0998164, 22, 0, 6 )
+transform = Transform( 0.0884237, 0, 0.0467042, 0, 0.1, 0, -0.0467042, 0, 0.0884237, 22, 0, 6 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge94" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0979153, 0, 0.0203122, 0, 0.1, 0, -0.0203122, 0, 0.0979153, 22, 0, 4 )
+transform = Transform( 0.0998938, 0, 0.00460624, 0, 0.1, 0, -0.00460624, 0, 0.0998938, 22, 0, 4 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge93" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0986612, 0, 0.0163095, 0, 0.1, 0, -0.0163095, 0, 0.0986612, 22, 0, 2 )
+transform = Transform( 0.089716, 0, 0.0441709, 0, 0.1, 0, -0.0441709, 0, 0.089716, 22, 0, 2 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge92" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0987218, 0, 0.015937, 0, 0.1, 0, -0.015937, 0, 0.0987218, 22, 0, 0 )
+transform = Transform( 0.0887758, 0, 0.0460309, 0, 0.1, 0, -0.0460309, 0, 0.0887758, 22, 0, 0 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge91" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999864, 0, 0.00165407, 0, 0.1, 0, -0.00165407, 0, 0.0999864, 22, 0, -2 )
+transform = Transform( 0.0999228, 0, 0.00393048, 0, 0.1, 0, -0.00393048, 0, 0.0999228, 22, 0, -2 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge90" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0998512, 0, 0.00545215, 0, 0.1, 0, -0.00545215, 0, 0.0998512, 22, 0, -4 )
+transform = Transform( 0.0998371, 0, 0.00570467, 0, 0.1, 0, -0.00570467, 0, 0.0998371, 22, 0, -4 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge89" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999008, 0, 0.00445942, 0, 0.1, 0, -0.00445942, 0, 0.0999008, 22, 0, -6 )
+transform = Transform( 0.0996201, 0, 0.00871045, 0, 0.1, 0, -0.00871045, 0, 0.0996201, 22, 0, -6 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge88" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0919028, 0, 0.0394194, 0, 0.1, 0, -0.0394194, 0, 0.0919028, 22, 0, -8 )
+transform = Transform( 0.0965575, 0, 0.026013, 0, 0.1, 0, -0.026013, 0, 0.0965575, 22, 0, -8 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge87" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0992195, 0, 0.0124692, 0, 0.1, 0, -0.0124692, 0, 0.0992195, 22, 0, -10 )
+transform = Transform( 0.0978509, 0, 0.0206203, 0, 0.1, 0, -0.0206203, 0, 0.0978509, 22, 0, -10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge86" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0895426, 0, 0.0445214, 0, 0.1, 0, -0.0445214, 0, 0.0895426, 22, 0, -12 )
+transform = Transform( 0.0998695, 0, 0.00511046, 0, 0.1, 0, -0.00511046, 0, 0.0998695, 22, 0, -12 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge85" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0904569, 0, 0.0426327, 0, 0.1, 0, -0.0426327, 0, 0.0904569, 22, 0, -14 )
+transform = Transform( 0.0966987, 0, 0.0254826, 0, 0.1, 0, -0.0254826, 0, 0.0966987, 22, 0, -14 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge84" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0890326, 0, 0.0455321, 0, 0.1, 0, -0.0455321, 0, 0.0890326, 22, 0, -16 )
+transform = Transform( 0.0899145, 0, 0.0437649, 0, 0.1, 0, -0.0437649, 0, 0.0899145, 22, 0, -16 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge83" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0991709, 0, 0.0128507, 0, 0.1, 0, -0.0128507, 0, 0.0991709, 22, 0, -18 )
+transform = Transform( 0.0998216, 0, 0.00597166, 0, 0.1, 0, -0.00597166, 0, 0.0998216, 22, 0, -18 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge82" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0959263, 0, 0.0282514, 0, 0.1, 0, -0.0282514, 0, 0.0959263, 22, 0, -20 )
+transform = Transform( 0.0911677, 0, 0.0410906, 0, 0.1, 0, -0.0410906, 0, 0.0911677, 22, 0, -20 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge81" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0979449, 0, 0.0201692, 0, 0.1, 0, -0.0201692, 0, 0.0979449, 22, 0, -22 )
+transform = Transform( 0.0962013, 0, 0.0273004, 0, 0.1, 0, -0.0273004, 0, 0.0962013, 22, 0, -22 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge80" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0930488, 0, 0.0366319, 0, 0.1, 0, -0.0366319, 0, 0.0930488, 22, 0, -24 )
+transform = Transform( 0.0995287, 0, 0.00969651, 0, 0.1, 0, -0.00969651, 0, 0.0995287, 22, 0, -24 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge79" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0966263, 0, 0.0257548, 0, 0.1, 0, -0.0257548, 0, 0.0966263, 22, 0, -26 )
+transform = Transform( 0.0916937, 0, 0.0399026, 0, 0.1, 0, -0.0399026, 0, 0.0916937, 22, 0, -26 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge78" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.099998, 0, 0.000624914, 0, 0.1, 0, -0.000624914, 0, 0.099998, 22, 0, -28 )
+transform = Transform( 0.0971132, 0, 0.0238543, 0, 0.1, 0, -0.0238543, 0, 0.0971132, 22, 0, -28 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge77" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999702, 0, 0.00244131, 0, 0.1, 0, -0.00244131, 0, 0.0999702, 22, 0, -30 )
+transform = Transform( 0.0980922, 0, 0.0194402, 0, 0.1, 0, -0.0194402, 0, 0.0980922, 22, 0, -30 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge76" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0961207, 0, 0.0275828, 0, 0.1, 0, -0.0275828, 0, 0.0961207, 22, 0, -32 )
+transform = Transform( 0.0978732, 0, 0.0205145, 0, 0.1, 0, -0.0205145, 0, 0.0978732, 22, 0, -32 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge75" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999211, 0, 0.00396697, 0, 0.1, 0, -0.00396697, 0, 0.0999211, 22, 0, -34 )
+transform = Transform( 0.0990699, 0, 0.0136059, 0, 0.1, 0, -0.0136059, 0, 0.0990699, 22, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge74" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0977813, 0, 0.020947, 0, 0.1, 0, -0.020947, 0, 0.0977813, 22, 0, 10 )
+transform = Transform( 0.0986785, 0, 0.0162024, 0, 0.1, 0, -0.0162024, 0, 0.0986785, 22, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge72" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0984274, 0, 0.0176646, 0, 0.1, 0, -0.0176646, 0, 0.0984274, -12, 0, 8 )
+transform = Transform( 0.0989845, 0, 0.0142147, 0, 0.1, 0, -0.0142147, 0, 0.0989845, -12, 0, 8 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge69" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999965, 0, 0.000853067, 0, 0.1, 0, -0.000853067, 0, 0.0999965, -12, 0, 2 )
+transform = Transform( 0.0897832, 0, 0.0440341, 0, 0.1, 0, -0.0440341, 0, 0.0897832, -12, 0, 2 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge59" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0952667, 0, 0.0304013, 0, 0.1, 0, -0.0304013, 0, 0.0952667, -12, 0, -18 )
+transform = Transform( 0.0997194, 0, 0.00748587, 0, 0.1, 0, -0.00748587, 0, 0.0997194, -12, 0, -18 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge57" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0878747, 0, 0.0477288, 0, 0.1, 0, -0.0477288, 0, 0.0878747, -12, 0, -22 )
+transform = Transform( 0.0986299, 0, 0.0164966, 0, 0.1, 0, -0.0164966, 0, 0.0986299, -12, 0, -22 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge53" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0985963, 0, 0.0166949, 0, 0.1, 0, -0.0166949, 0, 0.0985963, -12, 0, -30 )
+transform = Transform( 0.0936313, 0, 0.0351159, 0, 0.1, 0, -0.0351159, 0, 0.0936313, -12, 0, -30 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge52" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0975385, 0, 0.0220515, 0, 0.1, 0, -0.0220515, 0, 0.0975385, -12, 0, -32 )
+transform = Transform( 0.0961422, 0, 0.0275084, 0, 0.1, 0, -0.0275084, 0, 0.0961422, -12, 0, -32 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge51" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0982638, 0, 0.018554, 0, 0.1, 0, -0.018554, 0, 0.0982638, -12, 0, -34 )
+transform = Transform( 0.0983967, 0, 0.0178354, 0, 0.1, 0, -0.0178354, 0, 0.0983967, -12, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge6" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0993848, 0, 0.0110766, 0, 0.1, 0, -0.0110766, 0, 0.0993848, 2, 0, 10 )
+transform = Transform( 0.0975638, 0, 0.0219395, 0, 0.1, 0, -0.0219395, 0, 0.0975638, 2, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge7" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0882313, 0, 0.0470663, 0, 0.1, 0, -0.0470663, 0, 0.0882313, 4, 0, 10 )
+transform = Transform( 0.0884402, 0, 0.0466726, 0, 0.1, 0, -0.0466726, 0, 0.0884402, 4, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge8" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.092772, 0, 0.0373277, 0, 0.1, 0, -0.0373277, 0, 0.092772, 6, 0, 10 )
+transform = Transform( 0.0998988, 0, 0.00449923, 0, 0.1, 0, -0.00449923, 0, 0.0998988, 6, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge9" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.088889, 0, 0.045812, 0, 0.1, 0, -0.045812, 0, 0.088889, 8, 0, 10 )
+transform = Transform( 0.088823, 0, 0.0459398, 0, 0.1, 0, -0.0459398, 0, 0.088823, 8, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge10" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0985205, 0, 0.0171385, 0, 0.1, 0, -0.0171385, 0, 0.0985205, 10, 0, 10 )
+transform = Transform( 0.0962106, 0, 0.027268, 0, 0.1, 0, -0.027268, 0, 0.0962106, 10, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge11" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0905243, 0, 0.0424892, 0, 0.1, 0, -0.0424892, 0, 0.0905243, 12, 0, 10 )
+transform = Transform( 0.098466, 0, 0.0174479, 0, 0.1, 0, -0.0174479, 0, 0.098466, 12, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge12" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0895912, 0, 0.044423, 0, 0.1, 0, -0.044423, 0, 0.0895912, 14, 0, 10 )
+transform = Transform( 0.0998649, 0, 0.00519426, 0, 0.1, 0, -0.00519426, 0, 0.0998649, 14, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge100" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.090682, 0, 0.0421515, 0, 0.1, 0, -0.0421515, 0, 0.090682, 16, 0, 10 )
+transform = Transform( 0.0999141, 0, 0.00414148, 0, 0.1, 0, -0.00414148, 0, 0.0999141, 16, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge99" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0968275, 0, 0.0249894, 0, 0.1, 0, -0.0249894, 0, 0.0968275, 18, 0, 10 )
+transform = Transform( 0.0950046, 0, 0.0312114, 0, 0.1, 0, -0.0312114, 0, 0.0950046, 18, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge98" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0981515, 0, 0.0191376, 0, 0.1, 0, -0.0191376, 0, 0.0981515, 20, 0, 10 )
+transform = Transform( 0.096787, 0, 0.0251442, 0, 0.1, 0, -0.0251442, 0, 0.096787, 20, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge44" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0978901, 0, 0.020434, 0, 0.1, 0, -0.020434, 0, 0.0978901, 2, 0, -34 )
+transform = Transform( 0.0978917, 0, 0.0204262, 0, 0.1, 0, -0.0204262, 0, 0.0978917, 2, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge43" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0971877, 0, 0.0235485, 0, 0.1, 0, -0.0235485, 0, 0.0971877, 4, 0, -34 )
+transform = Transform( 0.0928526, 0, 0.0371265, 0, 0.1, 0, -0.0371265, 0, 0.0928526, 4, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge42" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999915, 0, 0.00130098, 0, 0.1, 0, -0.00130098, 0, 0.0999915, 6, 0, -34 )
+transform = Transform( 0.0923523, 0, 0.0383543, 0, 0.1, 0, -0.0383543, 0, 0.0923523, 6, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge41" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0981968, 0, 0.018906, 0, 0.1, 0, -0.018906, 0, 0.0981968, 8, 0, -34 )
+transform = Transform( 0.0881305, 0, 0.0472552, 0, 0.1, 0, -0.0472552, 0, 0.0881305, 8, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge40" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0970109, 0, 0.0242669, 0, 0.1, 0, -0.0242669, 0, 0.0970109, 10, 0, -34 )
+transform = Transform( 0.0911502, 0, 0.0411294, 0, 0.1, 0, -0.0411294, 0, 0.0911502, 10, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge39" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0999864, 0, 0.00165837, 0, 0.1, 0, -0.00165837, 0, 0.0999864, 12, 0, -34 )
+transform = Transform( 0.0960361, 0, 0.0278764, 0, 0.1, 0, -0.0278764, 0, 0.0960361, 12, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge38" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0973262, 0, 0.0229695, 0, 0.1, 0, -0.0229695, 0, 0.0973262, 14, 0, -34 )
+transform = Transform( 0.0996302, 0, 0.00859087, 0, 0.1, 0, -0.00859087, 0, 0.0996302, 14, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge103" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0959238, 0, 0.0282593, 0, 0.1, 0, -0.0282593, 0, 0.0959238, 16, 0, -34 )
+transform = Transform( 0.0920725, 0, 0.0390208, 0, 0.1, 0, -0.0390208, 0, 0.0920725, 16, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge102" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0885956, 0, 0.0463768, 0, 0.1, 0, -0.0463768, 0, 0.0885956, 18, 0, -34 )
+transform = Transform( 0.0985393, 0, 0.0170292, 0, 0.1, 0, -0.0170292, 0, 0.0985393, 18, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge101" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0991604, 0, 0.0129315, 0, 0.1, 0, -0.0129315, 0, 0.0991604, 20, 0, -34 )
+transform = Transform( 0.0954326, 0, 0.0298769, 0, 0.1, 0, -0.0298769, 0, 0.0954326, 20, 0, -34 )
 mesh = ExtResource( 7 )
 material/0 = null
 
 [node name="hedge13" type="MeshInstance" parent="Hedges"]
-transform = Transform( 0.0979592, 0, 0.0200997, 0, 0.1, 0, -0.0200997, 0, 0.0979592, 14, 0, 10 )
+transform = Transform( 0.099986, 0, 0.00167022, 0, 0.1, 0, -0.00167022, 0, 0.099986, 14, 0, 10 )
 mesh = ExtResource( 7 )
 material/0 = null
 
@@ -1011,7 +1013,17 @@ script = null
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11, 2.3, -3.2 )
 mode = 1
 script = null
-[connection signal="pressed" from="CanvasLayer/Control/Label/PlayButton" to="." method="_changeScene" binds= [ "res://Scenes/house.tscn" ]]
+
+[node name="dylan" type="MeshInstance" parent="."]
+transform = Transform( 0.0345396, 0, -0.0938457, 0, 0.1, 0, 0.0938457, 0, 0.0345396, 1.90875, 0.15, -2.52349 )
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="isaac" type="MeshInstance" parent="."]
+transform = Transform( -0.0401085, 0, -0.0916041, 0, 0.1, 0, 0.0916041, 0, -0.0401085, 1.556, 0.15, 2.617 )
+mesh = ExtResource( 13 )
+material/0 = null
+[connection signal="pressed" from="CanvasLayer/Control/Label/PlayButton" to="." method="_changeScene" binds= [ "res://Scenes/Tutorial.tscn" ]]
 [connection signal="pressed" from="CanvasLayer/Control/Label/LevelsButton" to="." method="_levelSelect"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/SettingsButton" to="." method="_settings"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/CreditsButton" to="." method="_credits"]
