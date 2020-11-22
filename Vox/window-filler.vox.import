@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/window-filler.vox-9aa65c2d21822a3ee4867ff7d8c786d8.mesh"
+
+[deps]
+
+source_file="res://Vox/window-filler.vox"
+dest_files=[ "res://.import/window-filler.vox-9aa65c2d21822a3ee4867ff7d8c786d8.mesh" ]
+
+[params]
+

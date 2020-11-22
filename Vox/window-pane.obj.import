@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/window-pane.obj-d4f60905c696765bbf08f45447b21f3c.mesh"
+
+[deps]
+
+files=[ "res://.import/window-pane.obj-d4f60905c696765bbf08f45447b21f3c.mesh" ]
+
+source_file="res://Vox/window-pane.obj"
+dest_files=[ "res://.import/window-pane.obj-d4f60905c696765bbf08f45447b21f3c.mesh", "res://.import/window-pane.obj-d4f60905c696765bbf08f45447b21f3c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

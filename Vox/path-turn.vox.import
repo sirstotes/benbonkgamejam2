@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/path-turn.vox-063b2ab6d762d88c3006f4b6f7a1aef4.mesh"
+
+[deps]
+
+source_file="res://Vox/path-turn.vox"
+dest_files=[ "res://.import/path-turn.vox-063b2ab6d762d88c3006f4b6f7a1aef4.mesh" ]
+
+[params]
+

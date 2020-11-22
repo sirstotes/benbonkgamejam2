@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/hedge.vox-390cd9d8e9b73451957c1501a226ea28.mesh"
+
+[deps]
+
+source_file="res://Vox/hedge.vox"
+dest_files=[ "res://.import/hedge.vox-390cd9d8e9b73451957c1501a226ea28.mesh" ]
+
+[params]
+
