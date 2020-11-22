@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Vox/path-turn.vox" type="ArrayMesh" id=1]
 [ext_resource path="res://Vox/path-end.vox" type="ArrayMesh" id=2]
@@ -32,7 +32,6 @@
 [ext_resource path="res://Scripts/Hedges.gd" type="Script" id=30]
 [ext_resource path="res://Vox/house.vox" type="ArrayMesh" id=31]
 [ext_resource path="res://Vox/truck.vox" type="ArrayMesh" id=32]
-[ext_resource path="res://Objects/Furniture/Tables/End Table.tscn" type="PackedScene" id=33]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -248,7 +247,7 @@ shape = SubResource( 9 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1745, 1.02627, -9.34658 )
 
 [node name="Blue Bed" parent="Objects" instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.35525, 0.63, 0.549107 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8507, 0.63, 0.549107 )
 
 [node name="Box1" parent="Objects" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95746, 0.7, -7.97787 )
@@ -336,9 +335,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 2.2, 1.5 )
 
 [node name="Window3" parent="Objects" instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9, 2.2, 3.5 )
-
-[node name="End Table" parent="Objects" instance=ExtResource( 33 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 7.03799, 0.9, -1.28396 )
 
 [node name="Hedges" type="StaticBody" parent="."]
 script = ExtResource( 30 )

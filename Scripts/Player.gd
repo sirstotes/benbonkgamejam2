@@ -36,6 +36,12 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if Input.is_action_just_pressed("player_pickup"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_WHEEL_UP:
+			pickup_node.translate(Vector3(0, 0, -0.1))
+		if event.button_index == BUTTON_WHEEL_DOWN:
+			pickup_node.translate(Vector3(0, 0, 0.1))
+		pickup_node.translation.z = clamp(pickup_node.translation.z, -4.9, -1)
 func _process(delta):
 	if crosshair != null:
 		if largeCrosshair:
@@ -48,6 +54,7 @@ func _process(delta):
 				crosshair.rect_size.y = crosshair.rect_size.x
 func _physics_process(delta):
 	velocity.y += gravity * delta
+	
 	if !holding:
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(global_transform.origin, pickup_node.global_transform.origin, [self])
@@ -57,6 +64,7 @@ func _physics_process(delta):
 				result['collider'].ready_to_pick_up = true
 		else:
 			largeCrosshair = false
+		pickup_node.translation = Vector3(0, 0, -4)
 	Input.is_action_just_pressed("player_pickup")
 	var capsule = collision.get_shape()
 	if Input.is_action_pressed("player_crouch"):
