@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/nightstand.vox-f3a67b99e5b369b7f8abce5691a414ac.mesh"
+
+[deps]
+
+source_file="res://Vox/nightstand.vox"
+dest_files=[ "res://.import/nightstand.vox-f3a67b99e5b369b7f8abce5691a414ac.mesh" ]
+
+[params]
+

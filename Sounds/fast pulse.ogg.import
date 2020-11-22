@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fast pulse.ogg-d2fb291f8c2c53add88ed837da3131b7.oggstr"
+
+[deps]
+
+source_file="res://Sounds/fast pulse.ogg"
+dest_files=[ "res://.import/fast pulse.ogg-d2fb291f8c2c53add88ed837da3131b7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

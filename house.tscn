@@ -1,11 +1,18 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Vox/house1.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Objects/Furniture/Beds/Green Bed.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Vox/truck.vox" type="ArrayMesh" id=4]
+[ext_resource path="res://Objects/Furniture/Boxes/Box3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/circle-crosshair-png-transparent-library-dotted-circle-border-115629009071u354tynqf.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/origami-mommy.regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://GameController.gd" type="Script" id=8]
+[ext_resource path="res://Objects/Furniture/Boxes/Box1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Furniture/Beds/Blue Bed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Furniture/Boxes/Box4.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sounds/fast pulse.ogg" type="AudioStream" id=13]
 
 [sub_resource type="DynamicFont" id=8]
 size = 24
@@ -139,11 +146,48 @@ shape = SubResource( 7 )
 
 [node name="Objects" type="Spatial" parent="."]
 
+[node name="Green Bed" parent="Objects" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1745, 1.02627, -9.34658 )
+
+[node name="Blue Bed" parent="Objects" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8507, 0.63, 0.549107 )
+
+[node name="Box1" parent="Objects" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95746, 0.7, -7.97787 )
+
+[node name="Box2" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 0.156021, 0, -0.987754, 0, 1, 0, 0.987754, 0, 0.156021, -2.97186, 0.7, -8.96343 )
+
+[node name="Box3" parent="Objects" instance=ExtResource( 9 )]
+transform = Transform( 0.526763, 0, -0.850012, 0, 1, 0, 0.850012, 0, 0.526763, -2.86174, 1.9, -9.02142 )
+
+[node name="Box4" parent="Objects" instance=ExtResource( 5 )]
+transform = Transform( 0.957868, 0, -0.28721, 0, 1, 0, 0.28721, 0, 0.957868, 2.14769, 1.00023, -6.52415 )
+
+[node name="Box5" parent="Objects" instance=ExtResource( 9 )]
+transform = Transform( 0.992258, 0, -0.12419, 0, 1, 0, 0.12419, 0, 0.992258, 2.03742, 1.9, -7.95829 )
+
+[node name="Box6" parent="Objects" instance=ExtResource( 12 )]
+transform = Transform( 0.940371, 0, 0.34015, 0, 1, 0, -0.34015, 0, 0.940371, -3.21424, 1.00023, -6.1995 )
+
+[node name="Box7" parent="Objects" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12399, 0.7, 2.35077 )
+
+[node name="Box8" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23161, 0.7, 0.544836 )
+
+[node name="Box9" parent="Objects" instance=ExtResource( 5 )]
+transform = Transform( 0.832186, -0.554496, 9.03389e-08, 0, -1.62921e-07, -1, 0.554496, 0.832186, -1.3558e-07, 4.15005, 1.94065, 1.56137 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.99057, 12.2813, -0.0636044 )
 max_walk_speed = 5.0
 jump_speed = 7.0
 gravity = -20.0
 crosshairPath = NodePath("../CanvasLayer/Control/TextureRect")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
 [connection signal="body_entered" from="truck/Area" to="." method="_onItemEnteredTruck"]
 [connection signal="body_exited" from="truck/Area" to="." method="_onItemExitedTruck"]
