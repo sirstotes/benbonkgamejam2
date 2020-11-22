@@ -1,5 +1,6 @@
 extends Spatial
 onready var transition : Panel = $CanvasLayer/Transition
+export var nextLevel = "res://Scenes/Title.tscn"
 var itemsLeft
 var itemsInTruck = []
 var scene
@@ -9,7 +10,7 @@ func _process(delta):
 	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
 	if itemsLeft+len(itemsInTruck) <= 0:
-		_changeScene("res://Scenes/Title.tscn")
+		_changeScene(nextLevel)
 	if scene != null:
 		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -4), 0.1)
 		if transition.rect_position.y >= -5:

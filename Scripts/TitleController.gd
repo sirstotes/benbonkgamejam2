@@ -5,6 +5,7 @@ var part = 0
 var scene
 var timePassed = 0
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	transition.visible = true
 func _process(delta):
 	timePassed += delta
