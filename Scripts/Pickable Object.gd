@@ -33,7 +33,7 @@ func _physics_process(delta):
 		axis_lock_angular_y = true
 		axis_lock_angular_z = true
 		distance = player.global_transform.origin - self.global_transform.origin
-		if distance.length() > 4:
+		if distance.length() > 5:
 			picked = false
 			ready_to_pick_up = false
 			player.holding = false
