@@ -1,52 +1,206 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Vox/ramp.vox" type="ArrayMesh" id=1]
 [ext_resource path="res://Vox/truck.vox" type="ArrayMesh" id=2]
+[ext_resource path="res://Vox/truckdoor.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Assets/781a23423046e9797a3d2bc3915eb050 (1).png" type="Texture" id=4]
+[ext_resource path="res://Scenes/truckdoor.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/truck.gd" type="Script" id=6]
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 20, 24, 24 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 50, 1, 25 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 40, 24, 24 )
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 17, 0.5, 6 )
+
+[sub_resource type="VisualShaderNodeColorConstant" id=15]
+constant = Color( 0.224609, 0.224609, 0.224609, 1 )
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=16]
+output_port_for_preview = 0
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeTextureUniformTriplanar" id=5]
+uniform_name = "TextureUniformTriplanar"
+texture_type = 1
+color_default = 1
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=7]
+output_port_for_preview = 0
+function = 0
+
+[sub_resource type="VisualShaderNodeScalarOp" id=8]
+output_port_for_preview = 0
+operator = 1
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=9]
+output_port_for_preview = 0
+function = 15
+
+[sub_resource type="VisualShaderNodeScalarOp" id=10]
+default_input_values = [ 0, 0.0, 1, 0.8 ]
+operator = 7
+
+[sub_resource type="VisualShaderNodeScalarOp" id=11]
+default_input_values = [ 0, 0.0, 1, 0.2 ]
+operator = 6
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=14]
+uniform_name = "time"
+
+[sub_resource type="VisualShader" id=12]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx;
+
+uniform sampler2D TextureUniformTriplanar : hint_black_albedo;
+uniform float time;
+
+
+// TRIPLANAR FUNCTION GLOBAL CODE
+	vec4 triplanar_texture(sampler2D p_sampler, vec3 p_weights, vec3 p_triplanar_pos) {
+		vec4 samp = vec4(0.0);
+		samp += texture(p_sampler, p_triplanar_pos.xy) * p_weights.z;
+		samp += texture(p_sampler, p_triplanar_pos.xz) * p_weights.y;
+		samp += texture(p_sampler, p_triplanar_pos.zy * vec2(-1.0, 1.0)) * p_weights.x;
+		return samp;
+	}
+
+	uniform vec3 triplanar_scale = vec3(1.0, 1.0, 1.0);
+	uniform vec3 triplanar_offset;
+	uniform float triplanar_sharpness = 0.5;
+
+	varying vec3 triplanar_power_normal;
+	varying vec3 triplanar_pos;
+
+void vertex() {
+// Output:0
+
+	// TRIPLANAR FUNCTION VERTEX CODE
+		triplanar_power_normal = pow(abs(NORMAL), vec3(triplanar_sharpness));
+		triplanar_power_normal /= dot(triplanar_power_normal, vec3(1.0));
+		triplanar_pos = VERTEX * triplanar_scale + triplanar_offset;
+		triplanar_pos *= vec3(1.0, -1.0, 1.0);
+}
+
+void fragment() {
+// Color:10
+	vec3 n_out10p0 = vec3(0.224609, 0.224609, 0.224609);
+	float n_out10p1 = 1.000000;
+
+// TextureUniformTriplanar:2
+	vec3 n_out2p0;
+	float n_out2p1;
+	{
+		vec4 n_tex_read = triplanar_texture( TextureUniformTriplanar, triplanar_power_normal, triplanar_pos );
+		n_out2p0 = n_tex_read.rgb;
+		n_out2p1 = n_tex_read.a;
+	}
+
+// ScalarUniform:9
+	float n_out9p0 = time;
+
+// ScalarFunc:4
+	float n_out4p0 = sin(n_out9p0);
+
+// ScalarOp:5
+	float n_out5p0 = dot(n_out2p0, vec3(0.333333, 0.333333, 0.333333)) - n_out4p0;
+
+// ScalarOp:8
+	float n_in8p1 = 0.20000;
+	float n_out8p0 = max(n_out5p0, n_in8p1);
+
+// ScalarOp:7
+	float n_in7p1 = 0.80000;
+	float n_out7p0 = min(n_out8p0, n_in7p1);
+
+// ScalarFunc:6
+	float n_out6p0 = round(n_out7p0);
+
+// Scalar:11
+	float n_out11p0 = 0.500000;
+
+// Output:0
+	ALBEDO = n_out10p0;
+	ALPHA = n_out6p0;
+	METALLIC = n_out11p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -354.494, -286.5 )
+nodes/vertex/0/position = Vector2( 480, -140 )
+nodes/fragment/0/position = Vector2( 920, -240 )
+nodes/fragment/2/node = SubResource( 5 )
+nodes/fragment/2/position = Vector2( -320, -200 )
+nodes/fragment/4/node = SubResource( 7 )
+nodes/fragment/4/position = Vector2( -160, 20 )
+nodes/fragment/5/node = SubResource( 8 )
+nodes/fragment/5/position = Vector2( 120, -160 )
+nodes/fragment/6/node = SubResource( 9 )
+nodes/fragment/6/position = Vector2( 600, -140 )
+nodes/fragment/7/node = SubResource( 10 )
+nodes/fragment/7/position = Vector2( 440, -160 )
+nodes/fragment/8/node = SubResource( 11 )
+nodes/fragment/8/position = Vector2( 280, -160 )
+nodes/fragment/9/node = SubResource( 14 )
+nodes/fragment/9/position = Vector2( -360, 80 )
+nodes/fragment/10/node = SubResource( 15 )
+nodes/fragment/10/position = Vector2( 580, -240 )
+nodes/fragment/11/node = SubResource( 16 )
+nodes/fragment/11/position = Vector2( 600, 40 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 5, 0, 4, 0, 5, 1, 7, 0, 6, 0, 5, 0, 8, 0, 8, 0, 7, 0, 6, 0, 0, 1, 9, 0, 4, 0, 10, 0, 0, 0, 11, 0, 0, 2 )
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = SubResource( 12 )
+shader_param/time = null
+shader_param/triplanar_scale = Vector3( 1, 0.2, 0 )
+shader_param/triplanar_offset = Vector3( 0, 0.86, 0 )
+shader_param/triplanar_sharpness = 0.5
+shader_param/TextureUniformTriplanar = ExtResource( 4 )
 
 [node name="truck" type="MeshInstance"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 11.523, 0, -27.8114 )
 mesh = ExtResource( 2 )
 material/0 = null
+script = ExtResource( 6 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5, 24.5, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, 7.5, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, 55.5, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -20.5, 31.5, -24 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape6" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -20.5, 31.5, 24 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="Area" type="Area" parent="."]
 
 [node name="CollisionShape4" type="CollisionShape" parent="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, 31.5, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="ramp" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.5, -1, 0 )
@@ -57,4 +211,14 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="ramp/StaticBody"]
 transform = Transform( 0.965992, -0.258572, 0.000246515, 0.258572, 0.965992, 0.000453404, -0.000355362, -0.00037425, 1, 2.28152, 4.69233, 0 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
+
+[node name="truckdoor2" type="MeshInstance" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 89 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 13 )
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+[connection signal="set_time" from="." to="truckdoor2" method="_on_truck_set_time"]

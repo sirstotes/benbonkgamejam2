@@ -4,9 +4,22 @@ export var nextLevel = "res://Scenes/Title.tscn"
 var itemsLeft
 var itemsInTruck = []
 var scene
+var vibing = 6.9
+
+signal set_time(time)
+
+func _ready():
+	$truck/Area.connect('body_entered', self, '_onItemEnteredTruck')
+	$truck/Area.connect('body_exited', self, '_onItemExitedTruck')
 func _process(delta):
-	if Input.is_action_just_pressed("ui_focus_next"):
-		_empty_truck()
+	vibing += 0.01
+	vibing = clamp(vibing, 0, 7)
+	if Input.is_action_just_pressed("ui_focus_next") and vibing > 6.9:
+		vibing = 3
+	elif vibing < 6.9:
+		emit_signal("set_time", vibing)
+		if vibing > 4.99 and vibing < 5.01:
+			_empty_truck()
 	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
 	if itemsLeft+len(itemsInTruck) <= 0:
