@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/controls.obj-6bff7d1b7ac597414170c8ceb0128749.mesh"
+
+[deps]
+
+files=[ "res://.import/controls.obj-6bff7d1b7ac597414170c8ceb0128749.mesh" ]
+
+source_file="res://Vox/controls.obj"
+dest_files=[ "res://.import/controls.obj-6bff7d1b7ac597414170c8ceb0128749.mesh", "res://.import/controls.obj-6bff7d1b7ac597414170c8ceb0128749.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
