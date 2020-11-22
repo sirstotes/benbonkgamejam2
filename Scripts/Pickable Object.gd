@@ -46,7 +46,6 @@ func _physics_process(delta):
 			picked = false
 			ready_to_pick_up = false
 			player.ready_to_let_down = true
-			print('let me down')
 	elif ready_to_pick_up:
 		picked = true
 		ready_to_pick_up = false
