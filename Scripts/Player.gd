@@ -53,7 +53,6 @@ func _physics_process(delta):
 		else:
 			largeCrosshair = false
 	Input.is_action_just_pressed("player_pickup")
-	print(holding)
 	if ready_to_let_down:
 		holding = false
 		ready_to_let_down = false

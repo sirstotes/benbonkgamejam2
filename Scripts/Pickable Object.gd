@@ -1,6 +1,7 @@
 extends RigidBody
 
 var velocity
+export var frozenUntilChosen = true
 
 onready var pickup = $"/root/Spatial/Player/Viewport/Pickup"
 onready var player = $"/root/Spatial/Player"
@@ -15,6 +16,8 @@ var looked_at = 0
 
 func _ready():
 	add_to_group("Moving")
+	if frozenUntilChosen:
+		sleeping = true
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.is_action_pressed("player_rotate") and picked:

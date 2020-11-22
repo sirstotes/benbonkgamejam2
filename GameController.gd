@@ -3,9 +3,8 @@ var itemsLeft
 var itemsInTruck = []
 func _process(delta):
 	if Input.is_action_just_pressed("ui_focus_next"):
-		print("emptying")
 		_empty_truck()
-	itemsLeft = $Objects.get_child_count()
+	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
 func _empty_truck():
 	for item in itemsInTruck:
