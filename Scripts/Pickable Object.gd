@@ -58,7 +58,6 @@ func _physics_process(delta):
 		axis_lock_angular_y = false
 		axis_lock_angular_z = false
 	#self.translation = pickup.global_transform.origin
-	
 func find_closest(input):
 	var negpit = abs(input - -PI/2)
 	var pi = abs(input - -PI)
