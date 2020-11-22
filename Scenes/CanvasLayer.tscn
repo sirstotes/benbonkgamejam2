@@ -9,24 +9,25 @@ size = 24
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.360784, 0.360784, 0.360784, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0.415686 )
-
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 0.584314 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 1, 0, 0, 0.435294 )
 
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
 [node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -68,17 +69,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Transition" type="Panel" parent="."]
+[node name="EndPanel" type="Panel" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = 10.0
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -87,17 +79,17 @@ margin_left = -256.0
 margin_top = -150.0
 margin_right = 256.0
 margin_bottom = 150.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="EndPanel"]
 anchor_right = 1.0
 margin_top = 25.0
 margin_bottom = 75.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "GOOD JOB!"
 align = 1
 valign = 1
@@ -105,7 +97,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="Panel"]
+[node name="Label3" type="Label" parent="EndPanel"]
 anchor_right = 1.0
 margin_left = 12.0
 margin_top = 75.0
@@ -121,7 +113,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label4" type="Label" parent="Panel"]
+[node name="Label4" type="Label" parent="EndPanel"]
 anchor_right = 1.0
 margin_left = 12.0
 margin_top = 125.0
@@ -136,7 +128,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="Panel"]
+[node name="Label5" type="Label" parent="EndPanel"]
 anchor_right = 1.0
 margin_left = 12.0
 margin_top = 175.0
@@ -151,7 +143,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayButton" type="Button" parent="Panel"]
+[node name="Next" type="Button" parent="EndPanel"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -160,18 +152,18 @@ margin_left = 10.0
 margin_top = -50.0
 margin_right = 195.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "--NEXT--"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayButton2" type="Button" parent="Panel"]
+[node name="Quit" type="Button" parent="EndPanel"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -180,13 +172,22 @@ margin_left = -195.0
 margin_top = -50.0
 margin_right = -10.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "--QUIT--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 10.0
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

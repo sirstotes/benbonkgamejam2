@@ -19,45 +19,43 @@ extents = Vector3( 40, 24, 24 )
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 17, 0.5, 6 )
 
-[sub_resource type="VisualShaderNodeColorConstant" id=15]
+[sub_resource type="VisualShaderNodeColorConstant" id=5]
 constant = Color( 0.224609, 0.224609, 0.224609, 1 )
 
-[sub_resource type="VisualShaderNodeScalarConstant" id=16]
+[sub_resource type="VisualShaderNodeScalarConstant" id=6]
 output_port_for_preview = 0
 constant = 0.5
 
-[sub_resource type="VisualShaderNodeTextureUniformTriplanar" id=5]
+[sub_resource type="VisualShaderNodeTextureUniformTriplanar" id=7]
 uniform_name = "TextureUniformTriplanar"
 texture_type = 1
 color_default = 1
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=7]
+[sub_resource type="VisualShaderNodeScalarFunc" id=8]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=8]
+[sub_resource type="VisualShaderNodeScalarOp" id=9]
 output_port_for_preview = 0
 operator = 1
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=9]
+[sub_resource type="VisualShaderNodeScalarFunc" id=10]
 output_port_for_preview = 0
 function = 15
 
-[sub_resource type="VisualShaderNodeScalarOp" id=10]
+[sub_resource type="VisualShaderNodeScalarOp" id=11]
 default_input_values = [ 0, 0.0, 1, 0.8 ]
 operator = 7
 
-[sub_resource type="VisualShaderNodeScalarOp" id=11]
+[sub_resource type="VisualShaderNodeScalarOp" id=12]
 default_input_values = [ 0, 0.0, 1, 0.2 ]
 operator = 6
 
-[sub_resource type="VisualShaderNodeScalarUniform" id=14]
+[sub_resource type="VisualShaderNodeScalarUniform" id=13]
 uniform_name = "time"
 
-[sub_resource type="VisualShader" id=12]
+[sub_resource type="VisualShader" id=14]
 code = "shader_type spatial;
-render_mode specular_schlick_ggx;
-
 uniform sampler2D TextureUniformTriplanar : hint_black_albedo;
 uniform float time;
 
@@ -140,28 +138,28 @@ void light() {
 graph_offset = Vector2( -354.494, -286.5 )
 nodes/vertex/0/position = Vector2( 480, -140 )
 nodes/fragment/0/position = Vector2( 920, -240 )
-nodes/fragment/2/node = SubResource( 5 )
+nodes/fragment/2/node = SubResource( 7 )
 nodes/fragment/2/position = Vector2( -320, -200 )
-nodes/fragment/4/node = SubResource( 7 )
+nodes/fragment/4/node = SubResource( 8 )
 nodes/fragment/4/position = Vector2( -160, 20 )
-nodes/fragment/5/node = SubResource( 8 )
+nodes/fragment/5/node = SubResource( 9 )
 nodes/fragment/5/position = Vector2( 120, -160 )
-nodes/fragment/6/node = SubResource( 9 )
+nodes/fragment/6/node = SubResource( 10 )
 nodes/fragment/6/position = Vector2( 600, -140 )
-nodes/fragment/7/node = SubResource( 10 )
+nodes/fragment/7/node = SubResource( 11 )
 nodes/fragment/7/position = Vector2( 440, -160 )
-nodes/fragment/8/node = SubResource( 11 )
+nodes/fragment/8/node = SubResource( 12 )
 nodes/fragment/8/position = Vector2( 280, -160 )
-nodes/fragment/9/node = SubResource( 14 )
+nodes/fragment/9/node = SubResource( 13 )
 nodes/fragment/9/position = Vector2( -360, 80 )
-nodes/fragment/10/node = SubResource( 15 )
+nodes/fragment/10/node = SubResource( 5 )
 nodes/fragment/10/position = Vector2( 580, -240 )
-nodes/fragment/11/node = SubResource( 16 )
+nodes/fragment/11/node = SubResource( 6 )
 nodes/fragment/11/position = Vector2( 600, 40 )
 nodes/fragment/connections = PoolIntArray( 2, 0, 5, 0, 4, 0, 5, 1, 7, 0, 6, 0, 5, 0, 8, 0, 8, 0, 7, 0, 6, 0, 0, 1, 9, 0, 4, 0, 10, 0, 0, 0, 11, 0, 0, 2 )
 
-[sub_resource type="ShaderMaterial" id=13]
-shader = SubResource( 12 )
+[sub_resource type="ShaderMaterial" id=15]
+shader = SubResource( 14 )
 shader_param/time = null
 shader_param/triplanar_scale = Vector3( 1, 0.2, 0 )
 shader_param/triplanar_offset = Vector3( 0, 0.86, 0 )
@@ -216,7 +214,7 @@ shape = SubResource( 4 )
 [node name="truckdoor2" type="MeshInstance" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 89 )
 mesh = ExtResource( 3 )
-material/0 = SubResource( 13 )
+material/0 = SubResource( 15 )
 script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": ""
