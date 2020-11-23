@@ -26,7 +26,7 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pause()
 func _process(delta):
-	if not finished:
+	if not finished and not get_tree().paused:
 		time += 1*delta
 	vibing += 0.01
 	vibing = clamp(vibing, 0, 7)

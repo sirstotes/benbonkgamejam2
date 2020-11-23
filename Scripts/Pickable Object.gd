@@ -16,21 +16,23 @@ var sensitivity = 0.2
 var looked_at = 0
 
 func _ready():
-	connect("body_entered", $'.', "on_body_entered")
+	contact_monitor = true
+	contacts_reported = 1
+	connect("body_entered", self, "_on_body_entered")
 	add_to_group("Moving")
 	if frozenUntilChosen:
 		sleeping = true
-
 func _input(event):
-	if event is InputEventMouseMotion and Input.is_action_pressed("player_rotate") and picked:
-		var looking = Vector3()
-		looking.y -= deg2rad(event.relative.x * sensitivity)
-		looking.x -= deg2rad(event.relative.y * sensitivity)
-		rotate_x(looking.x)
-		rotate_y(looking.y)
+	if event is InputEventMouseMotion:
+		sound.max_db = GlobalMusic.soundVolume
+		if Input.is_action_pressed("player_rotate") and picked:
+			var looking = Vector3()
+			looking.y -= deg2rad(event.relative.x * sensitivity)
+			looking.x -= deg2rad(event.relative.y * sensitivity)
+			rotate_x(looking.x)
+			rotate_y(looking.y)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
 	looked_at = looked_at - 1
 	#if looked_at > 0:
 		#my_mesh.get_material_override().get_next_pass()
@@ -73,10 +75,7 @@ func find_closest(input):
 		return pi
 	elif negpit < pit and negpit < pi and negpit < input:
 		return negpit
-
-func on_body_entered(body):
-	if body is RigidBody:
-		print('stuff')
-		sound.unit_db = body.linear_velocity.length()
+func _on_body_entered(body):
+	if not sound.playing:
+		sound.unit_db = linear_velocity.length()
 		sound.play()
-

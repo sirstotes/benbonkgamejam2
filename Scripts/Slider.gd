@@ -9,4 +9,4 @@ func _process(delta):
 	if music:
 		GlobalMusic.get_node("Track1").set_volume_db(value)
 	else:
-		pass#GlobalMusic.get_node("Track1").set_volume_db(value)
+		GlobalMusic.soundVolume = value
