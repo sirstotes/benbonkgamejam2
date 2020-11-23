@@ -6,6 +6,7 @@ var itemsInTruck = []
 var scene
 var vibing = 6.9
 var time = 0.0
+export(int) var par_trips = 1
 var trips = 0
 var finished = false
 export(float) var time_cringe = 600.0
@@ -34,11 +35,14 @@ func _process(delta):
 		var score = default_score
 		if time > time_cringe:
 			score = score/((time-time_cringe)*time_mutiplier)
-		score = score/trips
+		if (trips - par_trips + 1) > 0:
+			score = score/(trips - par_trips + 1)
+		else:
+			score = 1000
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().paused = true
-		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: "+String(trips)
-		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+" Seconds"
+		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: " + String(trips) + "; Par: " + String(par_trips)
+		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+ " Seconds; Par: " + String(int(time_cringe))
 		$CanvasLayer/EndPanel/Label5.text = "Grade: "+("A" if score > 800 else ("B" if score > 600 else ("C" if score > 400 else ("D" if score > 200 else "F"))))
 		$CanvasLayer/EndPanel.visible = true
 		$CanvasLayer/EndPanel/Next.connect("pressed", self, "_changeScene", [nextLevel])
