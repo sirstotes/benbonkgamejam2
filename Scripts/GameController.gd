@@ -8,8 +8,8 @@ var vibing = 6.9
 var time = 0.0
 var trips = 0
 var finished = false
-export(float) var time_cringe = 60.0
-export(float) var time_mutiplier = 0.5
+export(float) var time_cringe = 600.0
+export(float) var time_mutiplier = 0.04
 var default_score = 1000.0
 
 signal set_time(time)
@@ -42,7 +42,7 @@ func _process(delta):
 		get_tree().paused = true
 		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: "+String(trips)
 		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+" Seconds"
-		$CanvasLayer/EndPanel/Label5.text = "Grade: "+("A" if score > 60 else ("B" if score > 30 else ("C" if score > 15 else ("D" if score > 5 else "F"))))
+		$CanvasLayer/EndPanel/Label5.text = "Grade: "+("A" if score > 800 else ("B" if score > 600 else ("C" if score > 400 else ("D" if score > 200 else "F"))))
 		$CanvasLayer/EndPanel.visible = true
 		$CanvasLayer/EndPanel/Next.connect("pressed", self, "_changeScene", [nextLevel])
 		$CanvasLayer/EndPanel/Quit.connect("pressed", self, "_changeScene", ["res://Scenes/Title.tscn"])

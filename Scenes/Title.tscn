@@ -1023,7 +1023,7 @@ material/0 = null
 transform = Transform( -0.0401085, 0, -0.0916041, 0, 0.1, 0, 0.0916041, 0, -0.0401085, 1.556, 0.15, 2.617 )
 mesh = ExtResource( 13 )
 material/0 = null
-[connection signal="pressed" from="CanvasLayer/Control/Label/PlayButton" to="." method="_changeScene" binds= [ "res://Scenes/Tutorial.tscn" ]]
+[connection signal="pressed" from="CanvasLayer/Control/Label/PlayButton" to="." method="_changeScene" binds= [ "res://Scenes/Level1.tscn" ]]
 [connection signal="pressed" from="CanvasLayer/Control/Label/LevelsButton" to="." method="_levelSelect"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/SettingsButton" to="." method="_settings"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/CreditsButton" to="." method="_credits"]
