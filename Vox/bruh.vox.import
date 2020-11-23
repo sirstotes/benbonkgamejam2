@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/bruh.vox-be270a86b5e832dadc97fc37b22593d3.mesh"
+
+[deps]
+
+source_file="res://Vox/bruh.vox"
+dest_files=[ "res://.import/bruh.vox-be270a86b5e832dadc97fc37b22593d3.mesh" ]
+
+[params]
+

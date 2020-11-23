@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/blocker.vox-2e7fd8d220e8ed622deb831b78aa02fa.mesh"
+
+[deps]
+
+source_file="res://Vox/blocker.vox"
+dest_files=[ "res://.import/blocker.vox-2e7fd8d220e8ed622deb831b78aa02fa.mesh" ]
+
+[params]
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Vox/path-turn.vox" type="ArrayMesh" id=1]
 [ext_resource path="res://Vox/path-end.vox" type="ArrayMesh" id=2]
@@ -9,10 +9,35 @@
 [ext_resource path="res://Scenes/CanvasLayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Vox/Level3Combined.vox" type="ArrayMesh" id=8]
 [ext_resource path="res://Vox/path-cross.vox" type="ArrayMesh" id=9]
+[ext_resource path="res://Objects/Furniture/Doors/Door2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Furniture/Boxes/Box1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Furniture/Doors/Door1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/Furniture/Doors/Door3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Objects/Furniture/Window.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/Furniture/Chairs/Chair1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Furniture/Tables/Table.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Objects/Furniture/Plant.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Objects/Furniture/Tables/TV Stand.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Furniture/Rug.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/Furniture/Fixtures/Oven.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Objects/Furniture/Beds/Blue Bed.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Objects/Furniture/Fixtures/Sink.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Objects/Furniture/Fixtures/Toilet.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Objects/Furniture/Boxes/Box4.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Objects/Furniture/Tables/Desk.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue Small.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Objects/Furniture/Lamp.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Scripts/GameController.gd" type="Script" id=29]
 [ext_resource path="res://Scripts/Hedges.gd" type="Script" id=30]
+[ext_resource path="res://Objects/Furniture/Tables/End Table.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Objects/Furniture/Beds/Green Bed.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Objects/Furniture/Beds/Red Bed.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue Corner.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue Middle.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Objects/Furniture/Chairs/Couch Blue End.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Objects/Furniture/Boxes/Box3.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Objects/Furniture/Boxes/Box2.tscn" type="PackedScene" id=38]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -32,6 +57,11 @@ extents = Vector3( 18, 18, 1 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 1, 18, 23 )
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="ConcavePolygonShape" id=8]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
 
 [node name="Spatial" type="Spatial"]
 pause_mode = 2
@@ -88,7 +118,7 @@ mesh = ExtResource( 4 )
 material/0 = null
 
 [node name="path-straight13" type="MeshInstance" parent="floor"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 157, 0.5, -39.5 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 157, 0.4, -39.5 )
 mesh = ExtResource( 4 )
 material/0 = null
 
@@ -207,7 +237,181 @@ material/0 = null
 pause_mode = 1
 
 [node name="Box1" parent="Objects" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12, -6 )
+transform = Transform( -0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -1.5, 6.4, -7.2 )
+
+[node name="Window" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.2, -12.1 )
+
+[node name="Window2" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, -12.2 )
+
+[node name="Window3" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2, -12 )
+
+[node name="Window4" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 6.2, -12 )
+
+[node name="Window5" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.2, -12.2 )
+
+[node name="Window6" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2.2, -12.2 )
+
+[node name="Window7" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 6.2, -12 )
+
+[node name="Window8" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 6.2, -12 )
+
+[node name="Window9" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.2, 0.2 )
+
+[node name="Window10" parent="Objects" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 6.2, 0 )
+
+[node name="Door1" parent="Objects" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.65, -12.1 )
+
+[node name="Door3" parent="Objects" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.65, 0.1 )
+
+[node name="Door2" parent="Objects" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 1.65, -10 )
+
+[node name="Door4" parent="Objects" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.65, -6 )
+
+[node name="Door5" parent="Objects" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.1, 1.65, -4 )
+
+[node name="Door6" parent="Objects" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.65, -2.6 )
+
+[node name="Door7" parent="Objects" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5.75, -4 )
+
+[node name="Door8" parent="Objects" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.75, -4 )
+
+[node name="Table" parent="Objects" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3, 0.85, -8.9 )
+
+[node name="Chair1" parent="Objects" instance=ExtResource( 16 )]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 13.7, 0.85, -11.1 )
+
+[node name="Chair2" parent="Objects" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.3, 0.85, -7 )
+
+[node name="Chair3" parent="Objects" instance=ExtResource( 16 )]
+transform = Transform( -0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 14.9, 0.85, -9.2 )
+
+[node name="Chair4" parent="Objects" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8, 0.85, -9.1 )
+
+[node name="Couch Blue End" parent="Objects" instance=ExtResource( 27 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.1, 1, -7.5 )
+
+[node name="Plant" parent="Objects" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2, 2.4, -9 )
+
+[node name="Box4" parent="Objects" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 1, -10.8 )
+
+[node name="TV Stand" parent="Objects" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.9, -1.1 )
+
+[node name="Oven" parent="Objects" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2, 0.9, -1.1 )
+
+[node name="Sink" parent="Objects" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2, 0.9, -1 )
+
+[node name="Counter Corner" parent="Objects" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.1, 0.9, -1.3 )
+
+[node name="Red Bed" parent="Objects" instance=ExtResource( 33 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.4, 4.7, -9 )
+
+[node name="End Table" parent="Objects" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5, -7.2 )
+
+[node name="Blue Bed" parent="Objects" instance=ExtResource( 22 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 4.7, -1.6 )
+
+[node name="Lamp" parent="Objects" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 5.6, -5.1 )
+
+[node name="Rug" parent="Objects" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 4.3, -9.9 )
+
+[node name="Green Bed" parent="Objects" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4, 4.7, -9.2 )
+
+[node name="Desk" parent="Objects" instance=ExtResource( 26 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.8, 5, -10.8 )
+
+[node name="Chair5" parent="Objects" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4, 4.9, -10 )
+
+[node name="Sink2" parent="Objects" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7, 5, -1.1 )
+
+[node name="Counter Corner2" parent="Objects" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 5, -1.2 )
+
+[node name="Plant2" parent="Objects" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2, 5, -4.9 )
+
+[node name="Lamp2" parent="Objects" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2, 5.6, -7.7 )
+
+[node name="Sink3" parent="Objects" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8, 5, -1.1 )
+
+[node name="Counter Corner3" parent="Objects" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6, 5, -1.2 )
+
+[node name="Couch Corner" parent="Objects" instance=ExtResource( 34 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.6, 1, -1.4 )
+
+[node name="Couch Blue End2" parent="Objects" instance=ExtResource( 36 )]
+transform = Transform( 4.37114e-08, 0, 1, 0, 1, 0, 1, 0, -4.37114e-08, -2.6, 1, -1.4 )
+
+[node name="Chair6" parent="Objects" instance=ExtResource( 35 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.6, 1, -3.4 )
+
+[node name="Box2" parent="Objects" instance=ExtResource( 38 )]
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.8, 0.7, -7.5 )
+
+[node name="Box3" parent="Objects" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, -8.4 )
+
+[node name="Box5" parent="Objects" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1, 1, -1.1 )
+
+[node name="Box6" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.7, -8.9 )
+
+[node name="Box7" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 5, 1.9, -8.9 )
+
+[node name="Box8" parent="Objects" instance=ExtResource( 25 )]
+transform = Transform( 0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 1.3, 2.6, -1.2 )
+
+[node name="Box9" parent="Objects" instance=ExtResource( 38 )]
+transform = Transform( 0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 6, 0.7, -4.9 )
+
+[node name="Box10" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 1.9, -4.8 )
+
+[node name="Box11" parent="Objects" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 5.1, -3.7 )
+
+[node name="Box12" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 6.4, -10.9 )
+
+[node name="Box13" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( -0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 12.9, 6.4, -10.7 )
 
 [node name="Hedges" type="StaticBody" parent="."]
 pause_mode = 1
@@ -653,9 +857,29 @@ crosshairPath = NodePath("../CanvasLayer/Control/Crosshair")
 
 [node name="truck" parent="." instance=ExtResource( 6 )]
 pause_mode = 1
-transform = Transform( 0.05, 0, 0.0866025, 0, 0.1, 0, -0.0866025, 0, 0.05, 11.984, 0, -24.2534 )
+transform = Transform( 0.0707107, 0, 0.0707106, 0, 0.1, 0, -0.0707106, 0, 0.0707107, 11.984, 0, -24.2534 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 6, -4.9 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 7.1, -4.9 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/StaticBody"]
+shape = SubResource( 8 )
 [connection signal="set_time" from="." to="truck" method="_on_Spatial_set_time"]
 
 [editable path="CanvasLayer"]
