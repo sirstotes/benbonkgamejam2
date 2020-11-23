@@ -32,9 +32,8 @@ func _process(delta):
 			_empty_truck()
 	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
-	if itemsLeft+len(itemsInTruck) <= 0 or true and not finished:
+	if itemsLeft+len(itemsInTruck) <= 0 and not finished:
 		finished = true
-		trips = 1
 		var score = default_score
 		if time > time_cringe:
 			score = score/((time-time_cringe)*time_mutiplier)
