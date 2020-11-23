@@ -41,8 +41,8 @@ func _process(delta):
 			score = 1000
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().paused = true
-		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: " + String(trips) + "; Par: " + String(par_trips)
-		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+ " Seconds; Par: " + String(int(time_cringe))
+		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: " + String(trips) + "; Best: " + String(par_trips)
+		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+ " Seconds; Best: " + String(int(time_cringe))
 		$CanvasLayer/EndPanel/Label5.text = "Grade: "+("A" if score > 800 else ("B" if score > 600 else ("C" if score > 400 else ("D" if score > 200 else "F"))))
 		$CanvasLayer/EndPanel.visible = true
 		$CanvasLayer/EndPanel/Next.connect("pressed", self, "_changeScene", [nextLevel])
