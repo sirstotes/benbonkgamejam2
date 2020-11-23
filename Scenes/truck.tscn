@@ -58,8 +58,6 @@ uniform_name = "time"
 
 [sub_resource type="VisualShader" id=14]
 code = "shader_type spatial;
-render_mode specular_schlick_ggx;
-
 uniform sampler2D TextureUniformTriplanar : hint_black_albedo;
 uniform float time;
 
@@ -237,3 +235,4 @@ script = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
 shape = SubResource( 16 )
+[connection signal="set_time" from="." to="truckdoor2" method="_on_truck_set_time"]
