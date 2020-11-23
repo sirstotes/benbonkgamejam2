@@ -12,7 +12,8 @@ var text = ''
 var hints = ['The window looks wider than the door',
 			"I'm feeling pretty tired, but ill take the truck if you click on me",
 			"I'm feeling pretty tired, but ill take the truck if you click on me",
-			"We can drive the truck mutiple times, but I don't want to waste gas"]
+			"We can drive the truck mutiple times, but I don't want to waste gas",
+			"One time I had to stand on boxes to reach a really high place"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
