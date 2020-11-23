@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Vox/couch-end-blue.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://Vox/couch-end-white.vox" type="ArrayMesh" id=1]
 [ext_resource path="res://Scripts/Pickable Object.gd" type="Script" id=2]
 [ext_resource path="res://Assets/SoundPlayer.tscn" type="PackedScene" id=3]
 

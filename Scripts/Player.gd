@@ -36,10 +36,6 @@ func _input(event):
 		looking.x = clamp(looking.x, -PI/3, PI/3)
 		viewport.rotation.y = looking.y
 		viewport.rotation.x = looking.x
-	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if Input.is_action_just_pressed("player_pickup"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_WHEEL_UP:
 			pickup_node.translate(Vector3(0, 0, -0.1))

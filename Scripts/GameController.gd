@@ -19,6 +19,12 @@ func _ready():
 	$truck/Area.connect('body_entered', self, '_onItemEnteredTruck')
 	$truck/Area.connect('body_exited', self, '_onItemExitedTruck')
 	connect('set_time', $truck, '_on_Spatial_set_time')
+	$CanvasLayer/Settings/Label/RestartButton.connect('pressed', self, '_restart')
+	$CanvasLayer/Settings/Label/ExitButton.connect('pressed', self, '_changeScene', ['res://Scenes/Title.tscn'])
+	$CanvasLayer/Settings/Label/BackButton.connect('pressed', self, '_unpause')
+func _input(event):
+	if Input.is_action_just_pressed("ui_cancel"):
+		_pause()
 func _process(delta):
 	if not finished:
 		time += 1*delta
@@ -30,6 +36,11 @@ func _process(delta):
 			_empty_truck()
 	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
+	$CanvasLayer/Control/Label2.text = "  " + String(round(time))
+	if time > time_cringe*0.75:
+		$CanvasLayer/Control/Label2.add_color_override("font_color", Color(0.9, 0.9, 0))
+	if time > time_cringe:
+		$CanvasLayer/Control/Label2.add_color_override("font_color", Color(0.9, 0, 0))
 	if itemsLeft+len(itemsInTruck) <= 0 and not finished:
 		finished = true
 		var score = default_score
@@ -41,8 +52,8 @@ func _process(delta):
 			score = 1000
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().paused = true
-		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: " + String(trips) + "; Best: " + String(par_trips)
-		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))+ " Seconds; Best: " + String(int(time_cringe))
+		$CanvasLayer/EndPanel/Label3.text = "Trucks Loaded: " + String(trips)
+		$CanvasLayer/EndPanel/Label4.text = "Time Taken: "+String(int(time))
 		$CanvasLayer/EndPanel/Label5.text = "Grade: "+("A" if score > 800 else ("B" if score > 600 else ("C" if score > 400 else ("D" if score > 200 else "F"))))
 		$CanvasLayer/EndPanel.visible = true
 		$CanvasLayer/EndPanel/Next.connect("pressed", self, "_changeScene", [nextLevel])
@@ -56,6 +67,18 @@ func _process(delta):
 		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -650), 0.1)
 func _changeScene(scn : String):
 	scene = scn
+func _restart():
+	get_tree().reload_current_scene()
+func _pause():
+	if not finished:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		$CanvasLayer/Settings.visible = true
+		get_tree().paused = true
+func _unpause():
+	if not finished:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		$CanvasLayer/Settings.visible = false
+		get_tree().paused = false
 func _empty_truck():
 	for item in itemsInTruck:
 		item.queue_free()

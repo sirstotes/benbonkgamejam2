@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/couch-end-white.vox-34f80b710bd4097f63d3d3f1e3d56693.mesh"
+
+[deps]
+
+source_file="res://Vox/couch-end-white.vox"
+dest_files=[ "res://.import/couch-end-white.vox-34f80b710bd4097f63d3d3f1e3d56693.mesh" ]
+
+[params]
+

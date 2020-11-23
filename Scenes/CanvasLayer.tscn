@@ -1,29 +1,49 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Fonts/origami-mommy.regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/circle-crosshair-png-transparent-library-dotted-circle-border-115629009071u354tynqf.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/text.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/Slider.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=7]
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.360784, 0.360784, 0.360784, 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=9]
 size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.584314 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=11]
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 1, 0, 0, 0.435294 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0, 0, 0, 0.854902 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=6]
+color = Color( 1, 1, 1, 1 )
+thickness = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.584314 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0, 0, 0.435294 )
+
+[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0, 0, 0, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -61,9 +81,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -50.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "There are X Items Remaining"
 align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 1024.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "  100"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,7 +113,7 @@ margin_left = -256.0
 margin_top = -150.0
 margin_right = 256.0
 margin_bottom = 150.0
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -89,7 +123,7 @@ anchor_right = 1.0
 margin_top = 25.0
 margin_bottom = 75.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 9 )
 text = "GOOD JOB!"
 align = 1
 valign = 1
@@ -105,7 +139,7 @@ margin_right = -9.99997
 margin_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "Trucks Loaded: 1"
 align = 1
 valign = 1
@@ -120,7 +154,7 @@ margin_top = 125.0
 margin_right = -9.99997
 margin_bottom = 175.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "TIME TAKEN: 160 sec"
 align = 1
 valign = 1
@@ -135,7 +169,7 @@ margin_top = 175.0
 margin_right = -9.99997
 margin_bottom = 225.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "RANK: A"
 align = 1
 valign = 1
@@ -152,11 +186,11 @@ margin_left = 10.0
 margin_top = -50.0
 margin_right = 195.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 3 )
 text = "--NEXT--"
 __meta__ = {
@@ -172,22 +206,144 @@ margin_left = -195.0
 margin_top = -50.0
 margin_right = -10.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 3 )
 text = "--QUIT--"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Settings" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_right = -684.0
+custom_styles/panel = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -163.0
+margin_right = 330.0
+margin_bottom = -80.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "PAUSE"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Settings/Label"]
+margin_top = 75.0
+margin_right = 271.0
+margin_bottom = 100.0
+custom_fonts/font = ExtResource( 3 )
+text = "Music Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider1" type="HSlider" parent="Settings/Label/Label2"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 41.0
+custom_styles/slider = SubResource( 6 )
+custom_styles/grabber_area = SubResource( 6 )
+min_value = -80.0
+max_value = 24.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Settings/Label"]
+margin_top = 125.0
+margin_right = 271.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 3 )
+text = "Audio Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider2" type="HSlider" parent="Settings/Label/Label3"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 41.0
+custom_styles/slider = SubResource( 6 )
+custom_styles/grabber_area = SubResource( 6 )
+min_value = -80.0
+max_value = 24.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+music = false
+
+[node name="RestartButton" type="Button" parent="Settings/Label"]
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 225.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "    RESTART"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="Settings/Label"]
+margin_top = 250.0
+margin_right = 300.0
+margin_bottom = 275.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "    EXIT"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="Settings/Label"]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "    RESUME"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Transition" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
