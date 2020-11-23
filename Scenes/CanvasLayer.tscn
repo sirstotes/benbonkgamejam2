@@ -89,6 +89,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 1024.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "  100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EndPanel" type="Panel" parent="."]
 visible = false
 anchor_left = 0.5
@@ -325,6 +339,7 @@ __meta__ = {
 }
 
 [node name="Transition" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 10.0

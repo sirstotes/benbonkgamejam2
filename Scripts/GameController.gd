@@ -36,6 +36,11 @@ func _process(delta):
 			_empty_truck()
 	itemsLeft = $Objects.get_child_count()-len(itemsInTruck)
 	$CanvasLayer/Control/Label.text = "THERE ARE " + String(itemsLeft) + " ITEMS REMAINING"
+	$CanvasLayer/Control/Label2.text = "  " + String(round(time))
+	if time > time_cringe*0.75:
+		$CanvasLayer/Control/Label2.add_color_override("font_color", Color(0.9, 0.9, 0))
+	if time > time_cringe:
+		$CanvasLayer/Control/Label2.add_color_override("font_color", Color(0.9, 0, 0))
 	if itemsLeft+len(itemsInTruck) <= 0 and not finished:
 		finished = true
 		var score = default_score
