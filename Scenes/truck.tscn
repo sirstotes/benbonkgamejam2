@@ -237,4 +237,3 @@ script = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
 shape = SubResource( 16 )
-[connection signal="set_time" from="." to="truckdoor2" method="_on_truck_set_time"]
