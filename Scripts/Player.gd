@@ -65,6 +65,7 @@ func _physics_process(delta):
 					result['collider'].ready_to_pick_up = true	
 			if result['collider'].is_in_group("Dylan"):
 				largeCrosshair = true
+				result['collider'].seeing = true
 				if Input.is_action_just_pressed("player_pickup"):
 					emit_signal("load_truck")
 		else:

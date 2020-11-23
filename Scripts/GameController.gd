@@ -12,6 +12,7 @@ var finished = false
 export(float) var time_cringe = 600.0
 export(float) var time_mutiplier = 0.04
 var default_score = 1000.0
+var trips_factor = 1.2
 
 signal set_time(time)
 
@@ -47,7 +48,7 @@ func _process(delta):
 		if time > time_cringe:
 			score = score/((time-time_cringe)*time_mutiplier)
 		if (trips - par_trips + 1) > 0:
-			score = score/(trips - par_trips + 1)
+			score = score/pow(trips_factor,(trips - par_trips))
 		else:
 			score = 1000
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

@@ -5,42 +5,42 @@
 [ext_resource path="res://Fonts/text.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scripts/Slider.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.360784, 0.360784, 0.360784, 1 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.584314 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0, 0, 0.435294 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.854902 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=9]
+color = Color( 1, 1, 1, 1 )
+thickness = 5
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.584314 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxEmpty" id=11]
 
 [sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 1, 0, 0, 0.435294 )
-
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0, 0, 0, 0.854902 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxLine" id=6]
-color = Color( 1, 1, 1, 1 )
-thickness = 5
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0.584314 )
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 1, 0, 0, 0.435294 )
 
 [sub_resource type="StyleBoxFlat" id=13]
@@ -81,10 +81,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -50.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 text = "There are X Items Remaining"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control"]
+anchor_right = 1.0
+margin_top = 50.454
+margin_bottom = 75.454
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "Stuff"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -95,7 +109,7 @@ anchor_bottom = 1.0
 margin_top = -50.0
 margin_right = 1024.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "  100"
 valign = 1
@@ -113,7 +127,7 @@ margin_left = -256.0
 margin_top = -150.0
 margin_right = 256.0
 margin_bottom = 150.0
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -123,7 +137,7 @@ anchor_right = 1.0
 margin_top = 25.0
 margin_bottom = 75.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 3 )
 text = "GOOD JOB!"
 align = 1
 valign = 1
@@ -139,7 +153,7 @@ margin_right = -9.99997
 margin_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 text = "Trucks Loaded: 1"
 align = 1
 valign = 1
@@ -154,7 +168,7 @@ margin_top = 125.0
 margin_right = -9.99997
 margin_bottom = 175.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 text = "TIME TAKEN: 160 sec"
 align = 1
 valign = 1
@@ -169,7 +183,7 @@ margin_top = 175.0
 margin_right = -9.99997
 margin_bottom = 225.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 text = "RANK: A"
 align = 1
 valign = 1
@@ -186,11 +200,11 @@ margin_left = 10.0
 margin_top = -50.0
 margin_right = 195.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 10 )
-custom_styles/pressed = SubResource( 11 )
-custom_styles/focus = SubResource( 10 )
-custom_styles/disabled = SubResource( 12 )
-custom_styles/normal = SubResource( 11 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "--NEXT--"
 __meta__ = {
@@ -206,11 +220,11 @@ margin_left = -195.0
 margin_top = -50.0
 margin_right = -10.0
 margin_bottom = -25.0
-custom_styles/hover = SubResource( 10 )
-custom_styles/pressed = SubResource( 11 )
-custom_styles/focus = SubResource( 10 )
-custom_styles/disabled = SubResource( 12 )
-custom_styles/normal = SubResource( 11 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "--QUIT--"
 __meta__ = {
@@ -223,7 +237,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -1.0
 margin_right = -684.0
-custom_styles/panel = SubResource( 14 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -236,7 +250,7 @@ margin_top = -163.0
 margin_right = 330.0
 margin_bottom = -80.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 8 )
 text = "PAUSE"
 valign = 1
 __meta__ = {
@@ -257,8 +271,8 @@ __meta__ = {
 margin_top = 25.0
 margin_right = 300.0
 margin_bottom = 41.0
-custom_styles/slider = SubResource( 6 )
-custom_styles/grabber_area = SubResource( 6 )
+custom_styles/slider = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 9 )
 min_value = -80.0
 max_value = 24.0
 script = ExtResource( 4 )
@@ -280,8 +294,8 @@ __meta__ = {
 margin_top = 25.0
 margin_right = 300.0
 margin_bottom = 41.0
-custom_styles/slider = SubResource( 6 )
-custom_styles/grabber_area = SubResource( 6 )
+custom_styles/slider = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 9 )
 min_value = -80.0
 max_value = 24.0
 script = ExtResource( 4 )
@@ -294,11 +308,11 @@ music = false
 margin_top = 200.0
 margin_right = 300.0
 margin_bottom = 225.0
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 3 )
 text = "    RESTART"
 align = 0
@@ -310,11 +324,11 @@ __meta__ = {
 margin_top = 250.0
 margin_right = 300.0
 margin_bottom = 275.0
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 3 )
 text = "    EXIT"
 align = 0
@@ -326,11 +340,11 @@ __meta__ = {
 margin_top = 300.0
 margin_right = 300.0
 margin_bottom = 325.0
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 3 )
 text = "    RESUME"
 align = 0
