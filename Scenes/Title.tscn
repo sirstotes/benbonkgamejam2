@@ -192,6 +192,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Level1" type="Button" parent="CanvasLayer/LevelSelect/Label"]
+margin_top = 100.0
+margin_right = 300.0
+margin_bottom = 125.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 11 )
+text = "    LEVEL 1"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="Button" parent="CanvasLayer/LevelSelect/Label"]
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 175.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 11 )
+text = "    LEVEL 2"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3" type="Button" parent="CanvasLayer/LevelSelect/Label"]
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 225.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 11 )
+text = "    LEVEL 3"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="BackButton" type="Button" parent="CanvasLayer/LevelSelect/Label"]
 margin_top = 300.0
 margin_right = 300.0
@@ -1028,6 +1076,9 @@ material/0 = null
 [connection signal="pressed" from="CanvasLayer/Control/Label/SettingsButton" to="." method="_settings"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/CreditsButton" to="." method="_credits"]
 [connection signal="pressed" from="CanvasLayer/Control/Label/QuitButton" to="." method="_quit"]
+[connection signal="pressed" from="CanvasLayer/LevelSelect/Label/Level1" to="." method="_changeScene" binds= [ "res://Scenes/Level1.tscn" ]]
+[connection signal="pressed" from="CanvasLayer/LevelSelect/Label/Level2" to="." method="_changeScene" binds= [ "res://Scenes/Level2.tscn" ]]
+[connection signal="pressed" from="CanvasLayer/LevelSelect/Label/Level3" to="." method="_changeScene" binds= [ "res://Scenes/Level3.tscn" ]]
 [connection signal="pressed" from="CanvasLayer/LevelSelect/Label/BackButton" to="." method="_main"]
 [connection signal="pressed" from="CanvasLayer/Settings/Label/BackButton" to="." method="_main"]
 [connection signal="pressed" from="CanvasLayer/Credits/Label/BackButton" to="." method="_main"]

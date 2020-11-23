@@ -24,7 +24,6 @@ func _ready():
 	$CanvasLayer/Settings/Label/BackButton.connect('pressed', self, '_unpause')
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		_pause()
 func _process(delta):
 	if not finished:
@@ -67,10 +66,12 @@ func _restart():
 	get_tree().reload_current_scene()
 func _pause():
 	if not finished:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		$CanvasLayer/Settings.visible = true
 		get_tree().paused = true
 func _unpause():
 	if not finished:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		$CanvasLayer/Settings.visible = false
 		get_tree().paused = false
 func _empty_truck():
