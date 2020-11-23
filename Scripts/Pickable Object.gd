@@ -6,6 +6,7 @@ export var frozenUntilChosen = true
 onready var pickup = $"/root/Spatial/Player/Viewport/Pickup"
 onready var player = $"/root/Spatial/Player"
 onready var my_mesh = $"mesh"
+onready var sound = $AudioStreamPlayer3D
 
 var picked = false
 var ready_to_pick_up = false
@@ -15,6 +16,7 @@ var sensitivity = 0.2
 var looked_at = 0
 
 func _ready():
+	connect("body_entered", $'.', "on_body_entered")
 	add_to_group("Moving")
 	if frozenUntilChosen:
 		sleeping = true
@@ -28,6 +30,7 @@ func _input(event):
 		rotate_y(looking.y)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	
 	looked_at = looked_at - 1
 	#if looked_at > 0:
 		#my_mesh.get_material_override().get_next_pass()
@@ -70,3 +73,10 @@ func find_closest(input):
 		return pi
 	elif negpit < pit and negpit < pi and negpit < input:
 		return negpit
+
+func on_body_entered(body):
+	if body is RigidBody:
+		print('stuff')
+		sound.unit_db = body.linear_velocity.length()
+		sound.play()
+

@@ -69,3 +69,4 @@ func _onLoadTruck():
 	if vibing > 6.9:
 		vibing = 3
 		trips += 1
+
