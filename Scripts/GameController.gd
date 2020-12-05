@@ -69,6 +69,7 @@ func _process(delta):
 func _changeScene(scn : String):
 	scene = scn
 func _restart():
+	get_tree().paused = false
 	get_tree().reload_current_scene()
 func _pause():
 	if not finished:
