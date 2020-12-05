@@ -10,7 +10,7 @@ export(int) var par_trips = 1
 var trips = 0
 var finished = false
 export(float) var time_cringe = 600.0
-export(float) var time_mutiplier = 0.04
+export(float) var time_mutiplier = 0.02
 var default_score = 1000.0
 var trips_factor = 1.2
 
@@ -27,6 +27,7 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pause()
 func _process(delta):
+	OS.window_fullscreen = GlobalMusic.toggleOptions[1]
 	if not finished and not get_tree().paused:
 		time += 1*delta
 	vibing += 0.01
@@ -60,12 +61,12 @@ func _process(delta):
 		$CanvasLayer/EndPanel/Next.connect("pressed", self, "_changeScene", [nextLevel])
 		$CanvasLayer/EndPanel/Quit.connect("pressed", self, "_changeScene", ["res://Scenes/Title.tscn"])
 	if scene != null:
-		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -4), 0.1)
+		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -4), 1*delta)
 		if transition.rect_position.y >= -5:
 			get_tree().paused = false
 			get_tree().change_scene(scene)
 	else:
-		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -650), 0.1)
+		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -get_viewport().size.y-615), 1*delta)
 func _changeScene(scn : String):
 	scene = scn
 func _restart():

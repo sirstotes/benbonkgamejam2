@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/benbox.vox-2baa7bc0e6606b450bf9f883034a2b43.mesh"
+
+[deps]
+
+source_file="res://Vox/benbox.vox"
+dest_files=[ "res://.import/benbox.vox-2baa7bc0e6606b450bf9f883034a2b43.mesh" ]
+
+[params]
+

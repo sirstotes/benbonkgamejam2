@@ -51,10 +51,16 @@ func _physics_process(delta):
 			player.ready_to_let_down = true
 		distance = pickup.global_transform.origin - self.global_transform.origin
 		linear_velocity = distance * 10
-		if Input.is_action_just_pressed("player_pickup"):
-			picked = false
-			ready_to_pick_up = false
-			player.ready_to_let_down = true
+		if GlobalMusic.toggleOptions[0]:
+			if !Input.is_action_pressed("player_pickup"):
+				picked = false
+				ready_to_pick_up = false
+				player.ready_to_let_down = true
+		else:
+			if Input.is_action_just_pressed("player_pickup"):
+				picked = false
+				ready_to_pick_up = false
+				player.ready_to_let_down = true
 	elif ready_to_pick_up:
 		picked = true
 		ready_to_pick_up = false
