@@ -8,6 +8,7 @@ onready var player = $"/root/Spatial/Player"
 onready var my_mesh = $"mesh"
 onready var sound = $AudioStreamPlayer3D
 
+var looking = Vector3()
 var picked = false
 var ready_to_pick_up = false
 var distance = Vector3()
@@ -26,11 +27,14 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		sound.max_db = GlobalMusic.soundVolume
 		if Input.is_action_pressed("player_rotate") and picked:
-			var looking = Vector3()
 			looking.y -= deg2rad(event.relative.x * sensitivity)
-			looking.x -= deg2rad(event.relative.y * sensitivity)
-			rotate_x(looking.x)
-			rotate_y(looking.y)
+			if !Input.is_action_pressed("player_axis"):
+				looking.x -= deg2rad(event.relative.y * sensitivity)
+			else:
+				looking.z -= deg2rad(event.relative.y * sensitivity)
+			rotation.x = looking.x
+			rotation.y = looking.y
+			rotation.z = looking.z
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	looked_at = looked_at - 1
