@@ -16,6 +16,7 @@
 [ext_resource path="res://Vox/dylan.vox" type="ArrayMesh" id=14]
 [ext_resource path="res://Assets/transparent-black.tres" type="StyleBox" id=15]
 [ext_resource path="res://Scripts/CheckBox.gd" type="Script" id=16]
+[ext_resource path="res://Assets/FloorMaterial.tres" type="Material" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.509804 )
@@ -41,10 +42,6 @@ bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="PlaneMesh" id=8]
 size = Vector2( 1000, 1000 )
-
-[sub_resource type="SpatialMaterial" id=9]
-params_specular_mode = 3
-albedo_color = Color( 0.105882, 0.505882, 0.243137, 1 )
 
 [sub_resource type="BoxShape" id=10]
 extents = Vector3( 500, 1, 500 )
@@ -459,7 +456,7 @@ directional_shadow_mode = 0
 [node name="floor" type="MeshInstance" parent="."]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.15, -0.045 )
 mesh = SubResource( 8 )
-material/0 = SubResource( 9 )
+material/0 = ExtResource( 17 )
 
 [node name="StaticBody" type="StaticBody" parent="floor"]
 
