@@ -577,7 +577,7 @@ shape = SubResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 9 )]
 pause_mode = 1
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.07165, 2.24124, -15.2677 )
-max_walk_speed = 6.0
+max_walk_speed = 8.0
 jump_speed = 7.0
 gravity = -20.0
 crosshairPath = NodePath("../CanvasLayer/Control/Crosshair")

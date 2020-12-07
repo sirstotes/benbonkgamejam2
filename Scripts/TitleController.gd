@@ -21,7 +21,7 @@ func _process(delta):
 		if transition.rect_position.y >= -5:
 			get_tree().change_scene_to(load(scene))
 	else:
-		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -get_viewport().size.y-615), 1*delta)
+		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -get_viewport().size.y-615), 2*delta)
 func _changeScene(scn : String):
 	scene = scn
 func _main():

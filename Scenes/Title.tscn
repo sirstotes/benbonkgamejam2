@@ -43,13 +43,13 @@ bg_color = Color( 0, 0, 0, 1 )
 [sub_resource type="PlaneMesh" id=8]
 size = Vector2( 1000, 1000 )
 
-[sub_resource type="BoxShape" id=10]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 500, 1, 500 )
 
-[sub_resource type="BoxShape" id=11]
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 18, 18, 1 )
 
-[sub_resource type="BoxShape" id=12]
+[sub_resource type="BoxShape" id=11]
 extents = Vector3( 1, 18, 23 )
 
 [node name="Spatial" type="Spatial"]
@@ -462,7 +462,7 @@ material/0 = ExtResource( 17 )
 
 [node name="CollisionShape" type="CollisionShape" parent="floor/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="Boxes" type="Spatial" parent="."]
 
@@ -1070,19 +1070,19 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedges"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 10 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Hedges"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -34 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Hedges"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, -12 )
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Hedges"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2, -12 )
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="Door1" parent="." instance=ExtResource( 8 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13, 1.75, 2.8 )

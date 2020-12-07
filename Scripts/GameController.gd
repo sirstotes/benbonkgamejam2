@@ -66,7 +66,7 @@ func _process(delta):
 			get_tree().paused = false
 			get_tree().change_scene(scene)
 	else:
-		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -get_viewport().size.y-615), 1*delta)
+		transition.rect_position = transition.rect_position.linear_interpolate(Vector2(0, -get_viewport().size.y-615), 2*delta)
 func _changeScene(scn : String):
 	scene = scn
 func _restart():
